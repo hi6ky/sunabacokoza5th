@@ -1,14 +1,28 @@
+/* ヘッダー固定*/
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+}
 .top-img{
-   background-image:url("../img/top-family.jpeg"); 
+   background-image:url("../img/sky-family.jpeg"); 
    background-size: cover;
    opacity: 0.8;
-  height: 800px;
-  min-width: 100%;
+   height: 100vh;
+   width: 100vw;
+   /* ｙ軸でも中央寄せする */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.top-img h1{
+    text-align: center; 
 }
 .ubout-us{
-    display: flex;
-    flex-direction: row;
+    
 }
 .us-img{
-    width: 100px;
+    height: 50%;
+    width: 50%;
 }
