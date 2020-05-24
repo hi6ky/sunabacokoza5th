@@ -7,7 +7,7 @@ nav{
 }
 
 .top-img{
-   background-image:url("../img/sky-family.jpeg"); 
+   background-image:url(../img/sky-family.jpeg); 
    background-size: cover;
    opacity: 0.7;
    height: 100vh;
@@ -28,3 +28,5 @@ nav{
     height: 50%;
     width: 50vw;
 }
+
+    

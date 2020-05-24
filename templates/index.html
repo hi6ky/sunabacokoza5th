@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- マテリアライズのcssの読み込み -->
-    <link rel="stylesheet" href="./css/materialize/css/materialize.css">
-    <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降CSS２と表記 -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- マテリアライズのJS読み込み -->
-    <script src="./css/materialize/js/materialize.js"></script>
-    <!-- JSファイル2つ目（以降JS2）  自分で書くよう -->
-    <script src="./JS/common.js"></script>
-
+        <!-- マテリアライズのcss読みこみ -->
+    <link rel="stylesheet" href="../static/css/materialize.css">
+    <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <!-- 以下ヘッダー：固定は、CSS２を適用 -->
-     <nav>
+    <!-- ヘッダー -->
+    <!-- ヘッダーの固定は、固定は、style.cssで指定しています -->
+    <nav>
         <div class="nav-wrapper pink lighten-4">
-            <a href="" class="brand-logo">卒業制作Webサイト</a>
+            <a href="/" class="brand-logo">卒業制作Webサイト</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="">このサイトについて</a></li>
                 <li><a href="">掲示板</a></li>
                 <li><a href="">イベント</a></li>
                 <li><a href="">おすすめ</a></li>
-                <li><a href="">ログイン</a></li>
+                <li><a href="/login">ログイン/新規登録</a></li>
             </ul>
         </div>
     </nav>
-<!-- 以下は、CSS２を適用 -->
+<!-- 以下は、style.cssを適用 -->
+<!-- トップ画面 -->
     <div class="top-img">
         <h1>ここはいい感じの言葉をいれます</h1>
     </div>
+
+<!-- このサイトについて -->
 <div class="about-us">
         <h4>このサイトについて</h4>
     <div class="us-img">
-        <img src="img/hands-family.jpeg" alt="家族写真（手）">
+        <img src="../static/img/hands-family.jpeg" alt="家族写真（手）">
     </div>  
     <div class="us-text">
         <p>テキストテストテストテストテストテストテストテストテストテストテスト</p>           
@@ -46,13 +45,8 @@
 
 <!-- 掲示板 -->
 <div class="forum">
-    <div class="meeting">
-
-    </div>
-    <div class="">
-        
-    </div>
 </div>
+
 <!-- イベント -->
 <div class="event">
 
@@ -81,5 +75,6 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="../static/js/materialize.js"></script>
 </body>
 </html>
