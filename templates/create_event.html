@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/create_event" method="POST">
+    <input type="text" size="50" maxlength="50" name="title">
+    <textarea id="" cols="30" rows="10"  maxlength="300" name="content"></textarea>
+    <input type="submit" name="save" value="送信">
+</form>
+
+{% endblock%}
