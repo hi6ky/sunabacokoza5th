@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/materialize/css/materialize.css">
+    <link rel="stylesheet" href="../static/css/materialize.css">
     <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降CSS２と表記 -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <!-- ヘッダー：固定は、CSS２を適用 -->
     <nav>
         <div class="nav-wrapper" id="header">
-            <a href="" class="brand-logo">卒業制作Webサイト</a>
+            <a href="/" class="brand-logo">卒業制作Webサイト</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="">このサイトについて</a></li>
                 <li><a href="">掲示板</a></li>
                 <li><a href="">イベント</a></li>
                 <li><a href="">おすすめ</a></li>
-                <li><a href="">ログイン</a></li>
+                <li><a href="/login">ログイン/新規登録</a></li>
             </ul>
         </div>
     </nav>
@@ -29,7 +29,7 @@
 <div class="about-us">
         <h4>このサイトについて</h4>
     <div class="us-img">
-        <img src="img/hands-family.jpeg" alt="家族写真（手）">
+        <img src="../static/img/hands-family.jpeg" alt="家族写真（手）">
     </div>  
     <div class="us-text">
         <p>テキストテストテストテストテストテストテストテストテストテストテスト</p>
@@ -72,5 +72,6 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="../static/js/materialize.js"></script>
 </body>
 </html>

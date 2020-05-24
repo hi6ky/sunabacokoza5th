@@ -6,7 +6,7 @@ nav{
     z-index: 10000;
 }
 .top-img{
-   background-image:url("../img/sky-family.jpeg"); 
+   background-image:url(../img/sky-family.jpeg); 
    background-size: cover;
    opacity: 0.8;
    height: 100vh;
