@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- マテリアライズのcssの読み込み -->
     <link rel="stylesheet" href="./css/materialize/css/materialize.css">
     <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降CSS２と表記 -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- マテリアライズのJS読み込み -->
+    <script src="./css/materialize/js/materialize.js"></script>
+    <!-- JSファイル2つ目（以降JS2）  自分で書くよう -->
+    <script src="./JS/common.js"></script>
+
 </head>
 <body>
-    <!-- ヘッダー：固定は、CSS２を適用 -->
-    <nav>
-        <div class="nav-wrapper" id="header">
+    <!-- 以下ヘッダー：固定は、CSS２を適用 -->
+     <nav>
+        <div class="nav-wrapper pink lighten-4">
             <a href="" class="brand-logo">卒業制作Webサイト</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="">このサイトについて</a></li>
@@ -32,12 +38,20 @@
         <img src="img/hands-family.jpeg" alt="家族写真（手）">
     </div>  
     <div class="us-text">
-        <p>テキストテストテストテストテストテストテストテストテストテストテスト</p>
+        <p>テキストテストテストテストテストテストテストテストテストテストテスト</p>           
     </div>
 </div>
+          
+    
+
 <!-- 掲示板 -->
 <div class="forum">
+    <div class="meeting">
 
+    </div>
+    <div class="">
+        
+    </div>
 </div>
 <!-- イベント -->
 <div class="event">
@@ -46,14 +60,9 @@
 
 
 <!-- フッター -->
-<footer class="page-footer">
+<footer class="page-footer  pink lighten-4">
     <div class="container">
         <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.
-                </p>
-            </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
