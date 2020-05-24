@@ -1,13 +1,25 @@
 import sqlite3
+import requests
 from flask import Flask, request, render_template, redirect, session
 import datetime
+from bs4 import BeautifulSoup
+
 app = Flask(__name__)
 
+# 秘密鍵
 app.secret_key = "#4Lghil9Q3bgt0Oolw"
 
+# # スクレイピングの準備
+# r = requests.get("http://www.lgbt-kyokai.com/")
+# soup = BeautifulSoup(r.content, "html.parser")
+
+# トップ画面の表示及びスクレイピングの結果表示
 @app.route("/")
 def index():
+    # ns = soup.find(class_="newsList").text
+    # return render_template('index.html',tpl_ns=ns)
     return render_template('index.html')
+
 
 # @app.route("/top", methods=["GET","POST"])
 # def top():
@@ -124,6 +136,9 @@ def index():
 #     conn.commit()
 #     c.close()
 #     return redirect("/list")
+@app.route("/event_list")
+def regist_eventlist():
+    return render_template("event_list.html")
 
 @app.route("/regist/", methods=["GET"])
 def regist_get():
