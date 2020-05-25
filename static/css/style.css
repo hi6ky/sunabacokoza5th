@@ -8,9 +8,10 @@ nav{
 
 .top-img{
    background-image:url(../img/sky-family.jpeg); 
+   background-color:rgba(255, 255, 255, 0.6);
+   background-blend-mode:lighten;
    background-size: cover;
-   opacity: 0.7;
-   height: 100vh;
+     height: 100vh;
    width: 100vw;
    /* ｙ軸でも中央寄せする */
    display: flex;
@@ -21,12 +22,12 @@ nav{
     text-align: center;
 }
 
-.ubout-us{
+.contents{
+    display: flex;
     
 }
 .us-img{
-    height: 50%;
-    width: 50vw;
+   width: 100%;
 }
 
     
