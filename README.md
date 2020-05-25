@@ -8,3 +8,8 @@
 20200524
 20200525 0710 確認
 20200525 1800
+
+透明度
+background-image:("貴様の画像.jpg");
+background-color:rgba(255,255,255,0.8);
+background-blend-mode:lighten;
