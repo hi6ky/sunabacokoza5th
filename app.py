@@ -1,8 +1,8 @@
 import sqlite3
-import requests
+# import requests
 from flask import Flask, request, render_template, redirect, session
 import datetime
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
