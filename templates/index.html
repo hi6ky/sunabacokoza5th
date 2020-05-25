@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <!-- マテリアライズのcss読みこみ -->
+    <!-- マテリアライズのcss読みこみ -->
     <link rel="stylesheet" href="../static/css/materialize.css">
     <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
     <link rel="stylesheet" href="../static/css/style.css">
@@ -16,7 +16,7 @@
     <!-- ヘッダーの固定は、固定は、style.cssで指定しています -->
     <nav>
         <div class="nav-wrapper pink lighten-4">
-            <a href="/" class="brand-logo">卒業制作Webサイト</a>
+            <a href="../static/img/nijinotane_img.png" class="brand-logo">niji no tane</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="">このサイトについて</a></li>
                 <li><a href="/event_list">掲示板</a></li>
@@ -28,24 +28,33 @@
     </nav>
     <!-- 以下は、CSS２を適用 -->
     <div class="top-img">
-        <h1>ここはいい感じの言葉をいれます</h1>
+        <h1>多様な家族の”カタチ"を認め<br>誰もが家族を持つ幸せを。<br></h1>
     </div>
 
-    <!-- サイト紹介のページ -->
-   <div class="about-us">
-       <h3>このサイトについて</h3>
-       <div class="contents">
-    <div class="row">
-        <div class="col s6">
-            <img class="us-img" src="../static/img/hands-family.jpeg" alt="家族写真（手）">
-
-        </div>
-        <div class="col s6">
-            <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
-        </div>
+    <!-- サイト説明 -->
+    <div class="about-us">
+        <!-- マージントップ的な余白です -->
+        <div class="row">
+         <div class="col s24"></div>
+         </div>
+         <!-- ここからサイト説明の中身 -->
+        <div class="row">
+            <div class="col s4 offset-s1">
+                <img class="us-img" src="../static/img/hands-family.jpeg" alt="家族写真（手）">
+            </div>
+            <div class="col s4 offset-s1">
+                <div class="us-text">
+                    <h4>niji no tame について</h4>
+                     <p> niji no tane
+                         <br>niji = LGBTのテーマカラー色とりどりで多様<br>
+                         <br>tane = 未来・子ども・可能性<br>
+                         多様な家族の”カタチ”を認め、誰もが家族を持つ幸せをサポートしていくwebサイトとなっています。
+                         <br>niji no tameでは多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子ども
+                         や家族をつくりたいLGBTの方々が安心して情報交換が行える場を提供しそれぞれにとって幸せな家族を
+                         つくっていくお手伝いをすることを目的としています。</p>
+            </div>
         </div>
     </div>
-   </div>
      
             
           
@@ -54,8 +63,40 @@
         <h3>掲示板</h3>
         <iframe src="/event_list" frameborder="1" width="48%" height="400px%"></iframe>
     </div>
+
     <!-- イベント -->
     <div class="event">
+        <a href=""></a>
+
+        <!-- おすすめ一覧 -->
+        <h3>おすすめ映画一覧</h3>
+        <div class="choice">
+            <p>チョコレートドーナツ</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QVWY5ETc11k" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>キッズ・オールライト</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HQHpxXuCVLw" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+
+        </div>
+        <div class="choice">
+
+        </div>
+        <div class="choice">
+
+        </div>
+        <div class="choice">
+
+        </div>
+
+
+
+
+
+
 
     </div>
 
@@ -74,8 +115,8 @@
                     <h5 class="white-text">Links</h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="https://sunabaco.com/">SUNABACO</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://kodomap.org/">こどまっぷ</a></li>
+                        <li><a class="grey-text text-lighten-3" href=" http://pinkdot-okinawa.com">ピンクドット沖縄</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
                     </ul>
                 </div>
