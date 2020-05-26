@@ -1,0 +1,146 @@
+<!-- {% extends "base.html" %}
+{% block content %}
+
+<nav> mypage </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="../static/img/nijinotane_img.png">
+      </div>
+      <a href="#user"><img class="circle" src="../static/img/love.jpg"></a>
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">mypage</i></a>
+
+{% endblock%} -->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/img/nijinotane_img.png" sizes="16x16">
+    <title>niji no tane</title>
+    <!-- マテリアライズのcss読みこみ -->
+    <link rel="stylesheet" href="../static/css/materialize.css">
+    <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
+</head>
+
+<body>
+    <!-- Navbar goes here -->
+    <nav>
+        <div class="nav-wrapper pink lighten-4">
+            <a href="../static/img/nijinotane_img.png" class="brand-logo">niji no tane</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#about-us">このサイトについて</a></li>
+                <li><a href="">掲示板</a></li>
+                <li><a href="#event">イベント</a></li>
+                <li><a href="#recommend">おすすめ</a></li>
+                <li><a href="/login">ログイン/新規登録</a></li>
+                <li><a href="/mypage">マイページ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="con">
+        <!-- Page Layout here -->
+        <div class="row">
+            <div class="col s3">
+                <!-- Grey navigation panel -->
+                <nav>mypage</nav>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="../static/img/kawamitsu.jpg"
+                            style="width: 100px; height: 100px;border-radius: 50%; z-index: 999;">
+                        <p>Hiroki Kawamitsu</p>
+                    </div>
+                    <!-- <a href="#user"><img class="circle" src="../static/img/sky-family.jpeg" style="width: 200px;height: 200px;"></a> -->
+                    <a href="#name"><span class="white-text name">John Doe</span></a>
+                    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div>
+                <ul>
+                    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                    <li><a href="#!">Second Link</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a class="subheader">Subheader</a></li>
+                    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                </ul>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+
+            <div class="col s9">
+                <!-- Teal page content  -->
+                <nav>mypage</nav>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="../static/img/kawamitsu.jpg"
+                            style="width: 200px; height: 200px;border-radius: 50%; z-index: 999; box-shadow:10px 10px 10px rgba(0,0,0,0.4);">
+                        <h3>Hiroki Kawamitsu</h3>
+                    </div>
+                    <!-- <a href="#user"><img class="circle" src="../static/img/sky-family.jpeg" style="width: 200px;height: 200px;"></a> -->
+                    <a href="#name"><span class="white-text name">John Doe</span></a>
+                    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div>
+                <ul>
+                    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                    <li><a href="#!">Second Link</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a class="subheader">Subheader</a></li>
+                    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                </ul>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="page-footer pink lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://sunabaco.com/">SUNABACO</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://kodomap.org/">こどまっぷ</a></li>
+                        <li><a class="grey-text text-lighten-3" href=" http://pinkdot-okinawa.com">ピンクドット沖縄</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © すなぷろ5th（翁長、川満、上原）
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../static/js/materialize.js"></script>
+</body>
+
+
+</html>

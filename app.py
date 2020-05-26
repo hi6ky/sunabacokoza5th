@@ -20,6 +20,11 @@ def index():
     # return render_template('index.html',tpl_ns=ns)
     return render_template('index.html')
 
+# マイページ画面の表示
+@app.route("/mypage")
+def mypage():
+    return render_template('mypage.html')
+
 
 # @app.route("/top", methods=["GET","POST"])
 # def top():
