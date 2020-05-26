@@ -67,83 +67,80 @@ def mypage():
 #     # HTML側から取ってきた内容をリスト形式のまま受け渡し
 #     return render_template("dbtest.html", tpl_user_info = user_info)
 
-# @app.route("/create_event", methods=["GET"])
-# def crev_get():
-#     return render_template("create_event.html")
+# 掲示板機能
+@app.route("/add", methods=["GET"])
+def add_get():
+    return render_template("add.html")
 
-# @app.route("/create_event", methods=["POST"])
-# def crev_post():
-#     if "user_id" in session:
-#         user_id = session["user_id"]
-#     # # 入力フォームに入れられた値を習得して変数に格納
-#     title = request.form.get("title")
-#     cont = request/form/get("content")
-#     ut = datetime.datetime.now()
-#     # DBに接続
-#     conn = sqlite3.connect("lgbt.db")
-#     c = conn.cursor()
-#     #SQL文でDBに変数taskの中身を渡す
-#     c.execute("insert into event values(null, ?, ?)",(event,user_id,cont))
-#     # 変更を確定して書き込み
-#     conn.commit()
-#     # DBばいばい
-#     c.close()
-#     return "登録完了しました"
+@app.route("/add", methods=["POST"])
+def add_post():
+    if "user_id" in session:
+        user_id = session["user_id"]
+    # # 入力フォームに入れられた値を習得して変数に格納
+    name = request.form.get("name")
+    task = request.form.get("task")
+    # DBに接続
+    conn = sqlite3.connect("lgbt.db")
+    c = conn.cursor()
+    #SQL文でDBに変数taskの中身を渡す
+    c.execute("insert into task values(null, ?, ?)",(task,user_id))
+    # 変更を確定して書き込み
+    conn.commit()
+    # DBばいばい
+    c.close()
+    return redirect("/list")
 
-# @app.route("/list")
-# def task_list():
-#     user_id = session["user_id"]
-#     conn = sqlite3.connect("flask_test.db")
-#     c = conn.cursor()
-#     c.execute("select name from user where id = ?", (user_id,))
-#     user_name = c.fetchone()[0]
-#     c.execute("select id, task from task where user_id = ?",(user_id,))
-#     task_list = []
-#     for row in c.fetchall():
-#         # ダブル型で入ってるidとtaskを取り出してdict型に整形
-#         task_list.append({"id":row[0], "task":row[1]})
-#     c.close()
-#     print(task_list)
-#     return  render_template("task_list.html", tpl_user_name = user_name,tpl_task_list = task_list)
+@app.route("/list")
+def task_list():
+    user_id = session["user_id"]
+    conn = sqlite3.connect("flask_test.db")
+    c = conn.cursor()
+    c.execute("select name from user where id = ?", (user_id,))
+    user_name = c.fetchone()[0]
+    c.execute("select id, task from task where user_id = ?",(user_id,))
+    task_list = []
+    for row in c.fetchall():
+        # ダブル型で入ってるidとtaskを取り出してdict型に整形
+        task_list.append({"id":row[0], "task":row[1]})
+    c.close()
+    print(task_list)
+    return  render_template("task_list.html", tpl_user_name = user_name,tpl_task_list = task_list)
 
-# @app.route("/edit/<int:id>")
-# def edit(id):
-#     conn = sqlite3.connect("flask_test.db")
-#     c = conn.cursor()
-#     c.execute("select task from task where id = ?", (id,))
-#     task = c.fetchone() # ("タスク",)
-#     c.close()
-#     if task is not None:
-#         task = task[0] #("タスク")
-#     else:
-#         return "存在するidを指定してください。"
-#     item = {"id":id, "task":task}
-#     return render_template("edit.html", tpl_item = item)
+@app.route("/edit/<int:id>")
+def edit(id):
+    conn = sqlite3.connect("flask_test.db")
+    c = conn.cursor()
+    c.execute("select task from task where id = ?", (id,))
+    task = c.fetchone() # ("タスク",)
+    c.close()
+    if task is not None:
+        task = task[0] #("タスク")
+    else:
+        return "存在するidを指定してください。"
+    item = {"id":id, "task":task}
+    return render_template("edit.html", tpl_item = item)
 
-# @app.route("/edit", methods=["post"])
-# def update_task():
-#     task_id = request.form.get("task_id")
-#     task_id = int(task_id)
-#     task = request.form.get("task")
-#     # SQL分でDBを書き換え
-#     conn = sqlite3.connect("flask_test.db")
-#     c = conn.cursor()
-#     c.execute("update task set task = ? where id =?",(task,task_id))
-#     conn.commit()
-#     c.close()
-#     return redirect("/list")
+@app.route("/edit", methods=["post"])
+def update_task():
+    task_id = request.form.get("task_id")
+    task_id = int(task_id)
+    task = request.form.get("task")
+    # SQL分でDBを書き換え
+    conn = sqlite3.connect("flask_test.db")
+    c = conn.cursor()
+    c.execute("update task set task = ? where id =?",(task,task_id))
+    conn.commit()
+    c.close()
+    return redirect("/list")
 
-# @app.route("/del/<int:id>")
-# def del_task(id):
-#     conn = sqlite3.connect("flask_test.db")
-#     c = conn.cursor()
-#     c.execute("delete from task where id = ?", (id,))
-#     conn.commit()
-#     c.close()
-#     return redirect("/list")
-@app.route("/event_list")
-def regist_eventlist():
-    return render_template("event_list.html")
+@app.route("/del/<int:id>")
+def del_task(id):
+    conn = sqlite3.connect("flask_test.db")
+    c = conn.cursor()
+    c.execute("delete from task where id = ?", (id,))
+    conn.commit()
+    c.close()
+    return redirect("/list")
 
 @app.route("/regist/", methods=["GET"])
 def regist_get():
