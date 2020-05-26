@@ -31,10 +31,22 @@ nav {
 
 .choice_movie {
     display: inline-block;
-    padding: 20px;
+    margin: 20px;
 }
 
 .choice_youtube {
     display: inline-block;
-    padding: 20px;
+    margin: 20px;
+    color: white;
+    background-color: royalblue;
+}
+
+.choice_ehon {
+    display: inline-block;
+    margin: 20px;
+}
+
+a:hover {
+    color: white;
+    background-color: royalblue;
 }
