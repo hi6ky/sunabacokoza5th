@@ -18,7 +18,7 @@ app.secret_key = "#4Lghil9Q3bgt0Oolw"
 def index():
     # ns = soup.find(class_="newsList").text
     # return render_template('index.html',tpl_ns=ns)
-    return render_template('index.html')
+    return render_template('top_login.html')
 
 # マイページ画面の表示
 @app.route("/mypage")
