@@ -96,7 +96,6 @@
     </div>
 
     <!-- イベント -->
-<<<<<<< HEAD:templates/top_login.html
 <div id="event">
     <h3>イベント</h3>
     <a class="waves-effect waves-light btn-large">Button</a>
@@ -117,45 +116,14 @@
                     <div class="collapsible-body"><span>サザエさんのエンディングはみないようにしましょう。</span></div>
                 </li>
             </ul>
-=======
-    <div id="event">
-        <h3>イベント</h3>
-        <div class="row">
-            <div class="col s6">
-                <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">#</i>2020/05/28 sunabaco koza5th
-                            卒業制作発表
-                        </div>
-                        <div class="collapsible-body"><span>夜コースの発表は19時スタートです。場所はsunabaco kozaとなっております。</span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">#</i>2020/05/29 sleeping day</div>
-                        <div class="collapsible-body"><span>卒業制作で疲れたので、土曜日はお布団の中で一日過ごしましょう！</span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">#</i>2020/05/30</div>
-                        <div class="collapsible-body"><span>サザエさんのエンディングはみないようにしましょう。</span></div>
-                    </li>
-                </ul>
-            </div>
->>>>>>> 732fffc4832e42b9a9e8d4ef3169af9c0fb9e3a9:templates/index.html
         </div>
     </div>
 
-<<<<<<< HEAD:templates/top_login.html
 <div id="recommend">
     <h3>おすすめ</h3>
     <h4>映画</h4>
     <p>LGBTQを題材とした映画をいくつか紹介します！他にもおすすめがあれば、教えてください♪</p>
     <div class="movie">
-=======
-
-    <div id="recommend">
-        <h3>おすすめ</h3>
-        <h4>映画</h4>
-        <p>LGBTQを題材とした映画をいくつか紹介します！他にもおすすめがあれば、教えてください♪</p>
->>>>>>> 732fffc4832e42b9a9e8d4ef3169af9c0fb9e3a9:templates/index.html
         <div class="choice_movie">
             <p>チョコレートドーナツ</p>
             <iframe width="350" height="200" src="https://www.youtube.com/embed/QVWY5ETc11k" frameborder="0"
