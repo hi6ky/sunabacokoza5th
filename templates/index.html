@@ -4,59 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="../static/img/nijinotane_img.png" sizes="16x16">
+    <title>niji no tane</title>
     <!-- マテリアライズのcss読みこみ -->
     <link rel="stylesheet" href="../static/css/materialize.css">
     <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
     <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
 </head>
 
 <body>
     <!-- ヘッダー -->
-    <!-- ヘッダーの固定は、固定は、style.cssで指定しています -->
+    <!-- ヘッダーの固定は、style.cssで指定しています -->
     <nav>
         <div class="nav-wrapper pink lighten-4">
             <a href="../static/img/nijinotane_img.png" class="brand-logo">niji no tane</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="">このサイトについて</a></li>
-                <li><a href="/event_list">掲示板</a></li>
-                <li><a href="">イベント</a></li>
-                <li><a href="">おすすめ</a></li>
+                <li><a href="#about-us">このサイトについて</a></li>
+                <li><a href="">掲示板</a></li>
+                <li><a href="#event">イベント</a></li>
+                <li><a href="#recommend">おすすめ</a></li>
                 <li><a href="/login">ログイン/新規登録</a></li>
+                <li><a href="/mypage">マイページ</a></li>
             </ul>
         </div>
     </nav>
-    <!-- 以下は、CSS２を適用 -->
+   
     <div class="top-img">
-        <h1>多様な家族の”カタチ"を認め<br>誰もが家族を持つ幸せを。</br></h1>
+        <h1>多様な家族の”カタチ"を認め<br>誰もが家族を持つ幸せを。<br></h1>
     </div>
-    <div class="about-us">
-        <h4>niji no tame について</h4>
-        <div class="us-img">
-            <img src="../static/img/hands-family.jpeg" alt="家族写真（手）">
-        </div>
-        <div class="us-text">
-            <p> niji no tane
-                <br>niji = LGBTのテーマカラー色とりどりで多様</br>
-                <br>tane = 未来・子ども・可能性</br>
-                多様な家族の”カタチ”を認め、誰もが家族を持つ幸せをサポートしていくwebサイトとなっています。
-                niji no tame
-                では多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子どもや家族をつくりたいLGBTの方々が安心して情報交換が行える場を提供しそれぞれにとって幸せな家族をつくっていくお手伝いをすることを目的としています。
-            </p>
+
+    <!-- サイト説明 -->
+
+    <div id="about-us">
+        <div class="row">
+            <div class="col s4 offset-s1">
+                <img class="us-img" src="../static/img/hands-family.jpeg" alt="家族写真（手）">
+            </div>
+            <div class="col s4 offset-s1">
+                <div class="us-text">
+                    <h4>niji no tame について</h4>
+                    <p> niji no tane
+                        <br>niji = LGBTのテーマカラー色とりどりで多様<br>
+                        <br>tane = 未来・子ども・可能性<br>
+                        多様な家族の”カタチ”を認め、誰もが家族を持つ幸せをサポートしていくwebサイトとなっています。
+                        <br>niji no tameでは多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子ども
+                        や家族をつくりたいLGBTの方々が安心して情報交換が行える場を提供しそれぞれにとって幸せな家族を
+                        つくっていくお手伝いをすることを目的としています。</p>
+
+                </div>
+            </div>
         </div>
     </div>
-    <!-- 掲示板 -->
-    <div class="forum">
+
+
+
+    <!-- 掲示板 今は同じページに移動します -->
+    <div id="forum">
         <h3>掲示板</h3>
-        <iframe src="/event_list" frameborder="1" width="48%" height="400px%"></iframe>
+        <div class="row">
+            <div class="col s3 offset-s1">
+                <!-- 出会い -->
+                <div class="partner">                    
+                        <a href="forum.html" class="partner-button">
+                            <img src="../static/img/love.jpg" alt="ハート（手）">
+                        </a>
+                </div>
+            </div>
+
+            <div class="col s3 offset-s1">
+                 <!-- 妊活 -->
+                 <div class="pregnant">
+                     <a href="forum.html" class="pregnant-button">
+                         <img src="../static/img/pregnant.jpeg" alt="妊婦">
+                     </a>
+                 </div>
+            </div>
+            <div class="col s3 offset-s1">
+                <!-- 子育て -->
+                <div class="parenting">
+                    <a href="forum.html" class="parenting-button">
+                        <img src="../static/img/baby_bed.jpeg" alt="ベビーベッド">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- イベント -->
-    <div class="event">
-        <a href=""></a>
+<div id="event">
+    <h3>イベント</h3>
+    <div class="row">
+        <div class="col s6">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/28 sunabaco koza5th 卒業制作発表
+                    </div>
+                    <div class="collapsible-body"><span>夜コースの発表は19時スタートです。場所はsunabaco kozaとなっております。</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/29 sleeping day</div>
+                    <div class="collapsible-body"><span>卒業制作で疲れたので、土曜日はお布団の中で一日過ごしましょう！</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/30</div>
+                    <div class="collapsible-body"><span>サザエさんのエンディングはみないようにしましょう。</span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+  
 
-        <!-- おすすめ一覧 -->
-        <h5>おすすめ映画一覧</h5>
+<div id="recommend">
+    <h3>おすすめ</h3>
+    <h4>映画</h4>
+    <p>LGBTQを題材とした映画をいくつか紹介します！他にもおすすめがあれば、教えてください♪</p>
         <div class="choice_movie">
             <p>チョコレートドーナツ</p>
             <iframe width="350" height="200" src="https://www.youtube.com/embed/QVWY5ETc11k" frameborder="0"
@@ -71,7 +135,7 @@
         </div>
 
         <div class="choice_movie">
-            <p>バオバオ　フツウの家族</p>
+            <p>バオバオ  フツウの家族</p>
             <iframe width="350" height="200" src="https://www.youtube.com/embed/OaZOHoayVm4" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
@@ -96,11 +160,13 @@
             <iframe width="350" height="200" src="https://www.youtube.com/embed/-HF2mVCELws" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-
         </div>
-        <h5> youtube おすすめ一覧</h5>
+
+        <!-- ユーチューブ -->
+        <h4> youtube </h4>
+        <p>LGBTQをテーマにしたYouTubeです！！</p>
         <div class="choice_youtube">
-            <p>同性カップルが子供を授かる方法</p>
+            <p>同性愛者だって子供が欲しい！同性カップルが子供を授かる方法</p>
             <iframe width="350" height="200" src="https://www.youtube.com/embed/EGuxaH-Oljk" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
@@ -117,10 +183,8 @@
             <iframe width="350" height="200" src="https://www.youtube.com/embed/OV2W6loDgJg" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        </div>
-    </div>
 
-    <h5>おすすめ絵本一覧</h5>
+     <h5>おすすめ絵本一覧</h5>
 
     <div class="choice_youtube">
         <p>いろいろいろんなかぞくのほん</p>
@@ -157,21 +221,18 @@
 
     </div>
 
-
     <div class="choice">
 
     </div>
     <div class="choice">
 
     </div>
+</div>
+
+  
 
 
 
-
-
-
-
-    </div>
 
 
     <!-- フッター -->
@@ -188,8 +249,8 @@
                     <h5 class="white-text">Links</h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="https://sunabaco.com/">SUNABACO</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://kodomap.org/">こどまっぷ</a></li>
+                        <li><a class="grey-text text-lighten-3" href=" http://pinkdot-okinawa.com">ピンクドット沖縄</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
                     </ul>
                 </div>
@@ -204,5 +265,7 @@
     </footer>
     <script type="text/javascript" src="../static/js/materialize.js"></script>
 </body>
+
+
 
 </html>
