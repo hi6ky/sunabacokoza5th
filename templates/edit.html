@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/edit" method="POST">
+    <input type="hidden" value="{{tpl_item['id']}}" name="task_id">
+    <input type="text" size="100" maxlength="100" value="{{tpl_item['task']}}" name="task">
+    <input type="submit" name="save" value="編集">
+</form>
+
+{% endblock%}
