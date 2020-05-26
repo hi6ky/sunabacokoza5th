@@ -22,10 +22,10 @@
         <div class="nav-wrapper pink lighten-4">
             <a href="../static/img/nijinotane_img.png" class="brand-logo">niji no tane</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="">このサイトについて</a></li>
-                <li><a href="/event_list">掲示板</a></li>
-                <li><a href="">イベント</a></li>
-                <li><a href="">おすすめ</a></li>
+                <li><a href="#about-us">このサイトについて</a></li>
+                <li><a href="">掲示板</a></li>
+                <li><a href="#event">イベント</a></li>
+                <li><a href="#recommend">おすすめ</a></li>
                 <li><a href="/login">ログイン/新規登録</a></li>
                 <li><a href="#">マイページ</a></li>
             </ul>
@@ -38,7 +38,7 @@
 
     <!-- サイト説明 -->
 
-    <div class="about-us">
+    <div id="about-us">
         <div class="row">
             <div class="col s4 offset-s1">
                 <img class="us-img" src="../static/img/hands-family.jpeg" alt="家族写真（手）">
@@ -61,14 +61,40 @@
 
 
 
-    <!-- 掲示板 -->
-    <div class="forum">
+    <!-- 掲示板 今は同じページに移動します -->
+    <div id="forum">
         <h3>掲示板</h3>
-        <iframe src="/event_list" frameborder="1" width="48%" height="400px"></iframe>
+        <div class="row">
+            <div class="col s3 offset-s1">
+                <!-- 出会い -->
+                <div class="partner">                    
+                        <a href="forum.html" class="partner-button">
+                            <img src="../static/img/love.jpg" alt="ハート（手）">
+                        </a>
+                </div>
+            </div>
+
+            <div class="col s3 offset-s1">
+                 <!-- 妊活 -->
+                 <div class="pregnant">
+                     <a href="forum.html" class="pregnant-button">
+                         <img src="../static/img/pregnant.jpeg" alt="妊婦">
+                     </a>
+                 </div>
+            </div>
+            <div class="col s3 offset-s1">
+                <!-- 子育て -->
+                <div class="parenting">
+                    <a href="forum.html" class="parenting-button">
+                        <img src="../static/img/baby_bed.jpeg" alt="ベビーベッド">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- イベント -->
-<div class="event">
+<div id="event">
     <h3>イベント</h3>
     <div class="row">
         <div class="col s6">
@@ -92,7 +118,7 @@
 </div>
   
 
-<div class="recommend">
+<div id="recommend">
     <h3>おすすめ</h3>
     <h4>映画</h4>
     <p>LGBTQを題材とした映画をいくつか紹介します！他にもおすすめがあれば、教えてください♪</p>
