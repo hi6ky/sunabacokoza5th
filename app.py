@@ -192,10 +192,18 @@ def login_post():
         session["user_id"] = user_id[0]
         return render_template("index.html")
 
+@app.route("/forum")
+def forum():
+    # session.pop("user_id" , None)
+    return render_template("forum.html")
+
+
 @app.route("/logout")
 def logout():
     # session.pop("user_id" , None)
-    return redirect("logout.html")
+    return render_template("logout.html")
+
+
 
 
 if __name__ == "__main__":
