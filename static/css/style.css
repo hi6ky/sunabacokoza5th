@@ -117,33 +117,35 @@ nav {
 /* イベント */
 #event {
     margin-top: 120px;
+    
 }
 
 #event h3 {
     text-align: center;
 }
 
-.collapsible {
-    margin: auto;
-}
 
 /* おすすめ部分 */
-#recommend {
-    /* margin-top: -64px;
-    padding-top: 64px; */
-}
-
-#recommend h3 {
+/* #recommend{
+    margin-top: -64px;
+    padding-top: 64px;
+} */
+#recommend h3{
     margin-top: 120px;
     text-align: center;
 }
-
+.movie{
+    text-align: center;
+}
 .choice_movie {
     display: inline-block;
     margin: 20px;
+   
 }
-
+.youtube{
+    text-align: center;
+}
 .choice_youtube {
-    display: inline-block;
-    margin: 20px;
-
+    display: inline-block; 
+    margin: 20px;  
+}
