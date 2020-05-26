@@ -67,28 +67,28 @@ def mypage():
 #     # HTML側から取ってきた内容をリスト形式のまま受け渡し
 #     return render_template("dbtest.html", tpl_user_info = user_info)
 
-# @app.route("/create_event", methods=["GET"])
-# def crev_get():
-#     return render_template("create_event.html")
+# # 掲示板機能
+# @app.route("/add", methods=["GET"])
+# def add_get():
+#     return render_template("add.html")
 
-# @app.route("/create_event", methods=["POST"])
-# def crev_post():
+# @app.route("/add", methods=["POST"])
+# def add_post():
 #     if "user_id" in session:
 #         user_id = session["user_id"]
 #     # # 入力フォームに入れられた値を習得して変数に格納
-#     title = request.form.get("title")
-#     cont = request/form/get("content")
-#     ut = datetime.datetime.now()
+#     name = request.form.get("name")
+#     task = request.form.get("task")
 #     # DBに接続
 #     conn = sqlite3.connect("lgbt.db")
 #     c = conn.cursor()
 #     #SQL文でDBに変数taskの中身を渡す
-#     c.execute("insert into event values(null, ?, ?)",(event,user_id,cont))
+#     c.execute("insert into task values(null, ?, ?)",(task,user_id))
 #     # 変更を確定して書き込み
 #     conn.commit()
 #     # DBばいばい
 #     c.close()
-#     return "登録完了しました"
+#     return redirect("/list")
 
 # @app.route("/list")
 # def task_list():
@@ -141,9 +141,6 @@ def mypage():
 #     conn.commit()
 #     c.close()
 #     return redirect("/list")
-@app.route("/event_list")
-def regist_eventlist():
-    return render_template("event_list.html")
 
 @app.route("/regist/", methods=["GET"])
 def regist_get():
@@ -195,10 +192,10 @@ def login_post():
         session["user_id"] = user_id[0]
         return render_template("index.html")
 
-# @app.route("/logout")
-# def logout():
-#     session.pop("user_id" , None)
-#     return redirect("/login")
+@app.route("/logout")
+def logout():
+    session.pop("user_id" , None)
+    return redirect("/logout")
 
 
 if __name__ == "__main__":

@@ -7,17 +7,17 @@ nav {
 }
 
 
-.top-img{
-   background-image:url(../img/sky-family.jpeg); 
-   background-color:rgba(255, 255, 255, 0.6);
-   background-blend-mode:lighten;
-   background-size: cover;
-     height: 100vh;
-   width: 100vw;
-   /* ｙ軸でも中央寄せする */
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.top-img {
+    background-image: url(../img/sky-family.jpeg);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    /* ｙ軸でも中央寄せする */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -26,17 +26,18 @@ nav {
 }
 
 /*サイト紹介部分のCSSです*/
-#about-us{
+#about-us {
     margin-top: 60px;
     /* margin-top: -64px;
     padding-top: 64px; */
 }
+
 .us-img {
     width: 100%;
 }
 
 /* 掲示板部分のCSS */
-#forum{
+#forum {
     margin-top: 120px;
     /* ページ移動のずれ修正用 */
     /* margin-top: -64px;
@@ -46,6 +47,7 @@ nav {
 #forum h3 {
     text-align: center;
 }
+
 .borad{
      position: relative;
      overflow: hidden;
@@ -61,40 +63,47 @@ nav {
    object-fit: cover;
     
 }
+
 /* 出会うボタンの処理 */
-.partner-button{
- box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
- transition: .3s;
+.partner-button {
+    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: .3s;
 }
-.partner-button:hover{
+
+.partner-button:hover {
     opacity: 0.5;
     cursor: pointer;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
-.partner-button:active{
+
+.partner-button:active {
     position: relative;
-    top:3px;
-     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    top: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
+
 /* 妊活ボタンの処理 */
-.pregnant-button{
+.pregnant-button {
     box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
     transition: .3s;
 }
+
 .pregnant-button:hover {
     opacity: 0.5;
     cursor: pointer;
-    
+
 }
 .pregnant-button:active {
     position: relative;
     top: 3px;
 }
+
 /* 子育てボタンの処理 */
-.parenting-button{
+.parenting-button {
     box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
     transition: .3s;
 }
+
 .parenting-button:hover {
     opacity: 0.5;
     cursor: pointer;
@@ -106,11 +115,12 @@ nav {
 }
 
 /* イベント */
-#event{
+#event {
     margin-top: 120px;
     
 }
-#event h3{
+
+#event h3 {
     text-align: center;
 }
 
