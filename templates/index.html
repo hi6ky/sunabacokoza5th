@@ -1,19 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="../static/img/nijinotane_img.png" sizes="16x16">
+    <title>niji no tane</title>
     <!-- マテリアライズのcss読みこみ -->
     <link rel="stylesheet" href="../static/css/materialize.css">
     <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
     <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
 </head>
 
 <body>
     <!-- ヘッダー -->
-    <!-- ヘッダーの固定は、固定は、style.cssで指定しています -->
+    <!-- ヘッダーの固定は、style.cssで指定しています -->
     <nav>
         <div class="nav-wrapper pink lighten-4">
             <a href="../static/img/nijinotane_img.png" class="brand-logo">niji no tane</a>
@@ -23,94 +27,159 @@
                 <li><a href="">イベント</a></li>
                 <li><a href="">おすすめ</a></li>
                 <li><a href="/login">ログイン/新規登録</a></li>
+                <li><a href="#">マイページ</a></li>
             </ul>
         </div>
     </nav>
-    <!-- 以下は、CSS２を適用 -->
+   
     <div class="top-img">
         <h1>多様な家族の”カタチ"を認め<br>誰もが家族を持つ幸せを。<br></h1>
     </div>
 
     <!-- サイト説明 -->
+
     <div class="about-us">
         <div class="row">
-     <!-- top画像との余白..コードが見づらい。時間あったら調整したい -->
-            <div class="col offset-l12"></div>
-            <div class="col offset-l12"></div>
-            <div class="col offset-l12"></div>
-            <div class="col offset-l12"></div>
-            <div class="col offset-l12"></div>
-            <div class="col offset-l12"></div>
-    <!-- ここからサイト説明の中身 -->
             <div class="col s4 offset-s1">
                 <img class="us-img" src="../static/img/hands-family.jpeg" alt="家族写真（手）">
             </div>
             <div class="col s4 offset-s1">
                 <div class="us-text">
                     <h4>niji no tame について</h4>
-                     <p> niji no tane
-                         <br>niji = LGBTのテーマカラー色とりどりで多様<br>
-                         <br>tane = 未来・子ども・可能性<br>
-                         多様な家族の”カタチ”を認め、誰もが家族を持つ幸せをサポートしていくwebサイトとなっています。
-                         <br>niji no tameでは多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子ども
-                         や家族をつくりたいLGBTの方々が安心して情報交換が行える場を提供しそれぞれにとって幸せな家族を
-                         つくっていくお手伝いをすることを目的としています。</p>
+                    <p> niji no tane
+                        <br>niji = LGBTのテーマカラー色とりどりで多様<br>
+                        <br>tane = 未来・子ども・可能性<br>
+                        多様な家族の”カタチ”を認め、誰もが家族を持つ幸せをサポートしていくwebサイトとなっています。
+                        <br>niji no tameでは多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子ども
+                        や家族をつくりたいLGBTの方々が安心して情報交換が行える場を提供しそれぞれにとって幸せな家族を
+                        つくっていくお手伝いをすることを目的としています。</p>
+
+                </div>
             </div>
         </div>
     </div>
-     
-            
-          
+
+
+
     <!-- 掲示板 -->
-    <!-- 下は余白です -->
-     <div class="row">
-       <div class="col offset-l12"></div>
-       <div class="col offset-l12"></div>
-       <div class="col offset-l12"></div>
-       <div class="col offset-l12"></div>
-       <div class="col offset-l12"></div>
-       <div class="col offset-l12"></div>
-     </div>
     <div class="forum">
         <h3>掲示板</h3>
-        <iframe src="/event_list" frameborder="1" width="48%" height="400px%"></iframe>
+        <iframe src="/event_list" frameborder="1" width="48%" height="400px"></iframe>
     </div>
 
     <!-- イベント -->
-    <div class="event">
-        <a href=""></a>
+<div class="event">
+    <h3>イベント</h3>
+    <div class="row">
+        <div class="col s6">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/28 sunabaco koza5th 卒業制作発表
+                    </div>
+                    <div class="collapsible-body"><span>夜コースの発表は19時スタートです。場所はsunabaco kozaとなっております。</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/29 sleeping day</div>
+                    <div class="collapsible-body"><span>卒業制作で疲れたので、土曜日はお布団の中で一日過ごしましょう！</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/30</div>
+                    <div class="collapsible-body"><span>サザエさんのエンディングはみないようにしましょう。</span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+  
 
-        <!-- おすすめ一覧 -->
-        <h3>おすすめ映画一覧</h3>
-        <div class="choice">
+<div class="recommend">
+    <h3>おすすめ</h3>
+    <h4>映画</h4>
+    <p>LGBTQを題材とした映画をいくつか紹介します！他にもおすすめがあれば、教えてください♪</p>
+        <div class="choice_movie">
             <p>チョコレートドーナツ</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/QVWY5ETc11k" frameborder="0"
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/QVWY5ETc11k" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+        </div>
+        <div class="choice_movie">
             <p>キッズ・オールライト</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/HQHpxXuCVLw" frameborder="0"
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/HQHpxXuCVLw" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="choice_movie">
+            <p>バオバオ  フツウの家族</p>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/OaZOHoayVm4" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="choice_movie">
+            <p>おいしい家族</p>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/HVTqXc8Ais8" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="choice_movie">
+            <p>彼らが本気で編む時は</p>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/-Y_K6rnCuB0" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="choice_movie">
+            <p>パレードへようこそ</p>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/-HF2mVCELws" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <!-- ユーチューブ -->
+        <h4> youtube </h4>
+        <p>LGBTQをテーマにしたYouTubeです！！</p>
+        <div class="choice_youtube">
+            <p>同性愛者だって子供が欲しい！同性カップルが子供を授かる方法</p>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/EGuxaH-Oljk" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="choice_youtube">
+            <p>ママ2人と息子1人「私たちが子供を授かった方法</p>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/lTgw_0CC_WA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="choice_youtube">
+            <p>僕にはパパが2人いる」ゲイカップルと息子くんの話！</p>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/OV2W6loDgJg" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
 
-
         </div>
-        <div class="choice">
-
-        </div>
-        <div class="choice">
-
-        </div>
-        <div class="choice">
-
-        </div>
-
-
-
-
-
-
+         <!-- 記事 -->
+    <div class="choice_Article">
+        <h4>記事</h4>
+        <p><a href="https://st.benesse.ne.jp/ikuji/content/?id=35613">トランスジェンダー・ゲイ・ママ・「親３人育児」始めました</a></p>
+        <p><a href="http://www.moj.go.jp/JINKEN/LGBT/index.htmlhttp://www.moj.go.jp/JINKEN/LGBT/index.html">
+        </a>LGBTの子育て研究に関する論文を読んでみた</p>
 
     </div>
+    <div class="choice">
+
+    </div>
+    <div class="choice">
+
+    </div>
+</div>
+
+  
+
+
+
 
 
     <!-- フッター -->
@@ -143,5 +212,6 @@
     </footer>
     <script type="text/javascript" src="../static/js/materialize.js"></script>
 </body>
+
 
 </html>
