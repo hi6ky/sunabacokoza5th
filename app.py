@@ -194,8 +194,8 @@ def login_post():
 
 @app.route("/logout")
 def logout():
-    session.pop("user_id" , None)
-    return redirect("/logout")
+    # session.pop("user_id" , None)
+    return redirect("logout.html")
 
 
 if __name__ == "__main__":
