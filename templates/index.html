@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="../static/img/nijinotane_img.png" sizes="16x16">
+    <title>niji no tane</title>
     <!-- マテリアライズのcss読みこみ -->
     <link rel="stylesheet" href="../static/css/materialize.css">
     <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
     <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
 </head>
 
 <body>
@@ -23,6 +26,7 @@
                 <li><a href="">イベント</a></li>
                 <li><a href="">おすすめ</a></li>
                 <li><a href="/login">ログイン/新規登録</a></li>
+                <li><a href="#">マイページ</a></li>
             </ul>
         </div>
     </nav>
@@ -32,34 +36,34 @@
     </div>
 
     <!-- サイト説明 -->
-    <div class="about-us">
-        <!-- マージントップ的な余白です -->
-        <div class="row">
-         <div class="col s12">あ</div>
-         <div class="col s12">いい</div>
-         <div class="col s12">ううう</div>
-         </div>
-         <!-- ここからサイト説明の中身 -->
-        <div class="row">
-            <div class="col s4 offset-s1">
-                <img class="us-img" src="../static/img/hands-family.jpeg" alt="家族写真（手）">
-            </div>
-            <div class="col s4 offset-s1">
-                <div class="us-text">
-                    <h4>niji no tame について</h4>
-                     <p> niji no tane
-                         <br>niji = LGBTのテーマカラー色とりどりで多様<br>
-                         <br>tane = 未来・子ども・可能性<br>
-                         多様な家族の”カタチ”を認め、誰もが家族を持つ幸せをサポートしていくwebサイトとなっています。
-                         <br>niji no tameでは多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子ども
-                         や家族をつくりたいLGBTの方々が安心して情報交換が行える場を提供しそれぞれにとって幸せな家族を
-                         つくっていくお手伝いをすることを目的としています。</p>
+
+    <div class="about-us"></div>
+    <!-- マージントップ的な余白です -->
+    <div class="row">
+        <div class="col s24"></div>
+    </div>
+    <!-- ここからサイト説明の中身 -->
+    <div class="row">
+        <div class="col s4 offset-s1">
+            <img class="us-img" src="../static/img/hands-family.jpeg" alt="家族写真（手）">
+        </div>
+        <div class="col s4 offset-s1">
+            <div class="us-text">
+                <h4>niji no tame について</h4>
+                <p> niji no tane
+                    <br>niji = LGBTのテーマカラー色とりどりで多様<br>
+                    <br>tane = 未来・子ども・可能性<br>
+                    多様な家族の”カタチ”を認め、誰もが家族を持つ幸せをサポートしていくwebサイトとなっています。
+                    <br>niji no tameでは多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子ども
+                    や家族をつくりたいLGBTの方々が安心して情報交換が行える場を提供しそれぞれにとって幸せな家族を
+                    つくっていくお手伝いをすることを目的としています。</p>
+
             </div>
         </div>
     </div>
-     
-            
-          
+
+
+
     <!-- 掲示板 -->
     <!-- 下は余白です -->
      <div class="row">
@@ -69,44 +73,62 @@
      </div>
     <div class="forum">
         <h3>掲示板</h3>
-        <iframe src="/event_list" frameborder="1" width="48%" height="400px%"></iframe>
+        <iframe src="/event_list" frameborder="1" width="48%" height="400px"></iframe>
     </div>
 
     <!-- イベント -->
-    <div class="event">
-        <a href=""></a>
+    <h3>イベントのお知らせ</h3>
+    <div class="row">
+        <div class="col s6">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/28 sunabaco koza5th 卒業制作発表
+                    </div>
+                    <div class="collapsible-body"><span>夜コースの発表は19時スタートです。場所はsunabaco kozaとなっております。</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/29 sleeping day</div>
+                    <div class="collapsible-body"><span>卒業制作で疲れたので、土曜日はお布団の中で一日過ごしましょう！</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">#</i>2020/05/30</div>
+                    <div class="collapsible-body"><span>サザエさんのエンディングはみないようにしましょう。</span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-        <!-- おすすめ一覧 -->
-        <h3>おすすめ映画一覧</h3>
-        <div class="choice">
-            <p>チョコレートドーナツ</p>
+    <!-- おすすめ一覧 -->
+    <h3>おすすめ映画一覧</h3>
+    <div class="row">
+        <div class="col s6">
+            <h5>チョコレートドーナツ</h5>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QVWY5ETc11k" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-            <p>キッズ・オールライト</p>
+        </div>
+        <div class="col s6">
+            <h5>キッズ・オールライト</h5>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/HQHpxXuCVLw" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-
-
         </div>
-        <div class="choice">
+    </div>
 
-        </div>
-        <div class="choice">
-
-        </div>
-        <div class="choice">
-
-        </div>
-
-
-
-
-
-
+    <div class="choice">
 
     </div>
+    <div class="choice">
+
+    </div>
+    <div class="choice">
+
+    </div>
+
+
+
+
+
 
 
     <!-- フッター -->
