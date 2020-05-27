@@ -252,6 +252,10 @@ def login_post():
         session["user_id"] = user_id[0]
         return render_template("top_login.html")
 
+@app.route("/talk")
+def talk():
+    return render_template("talk.html")
+
 @app.route("/forum")
 def forum():
     # session.pop("user_id" , None)
