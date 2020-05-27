@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>掲示板（出会い）</title>
     <link rel="stylesheet" href="../static/css/materialize.css">
+    <!-- マテリアライズ（アイコン使用のため）の読み込み -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+    <!-- 継承で使い回ししたい！ -->
     <!-- 掲示板用のヘッダーです。横に選択バーをつけました -->
      <nav>
          <div class="nav-wrapper pink lighten-4">
@@ -25,10 +28,21 @@
                  <li class="tab"><a class="active" href="#test2">妊活</a></li>
                  <li class="tab disabled"><a href="#test3">子育て</a></li>
                  <li class="tab"><a href="#test4">イベント作成</a></li>
+                 <!-- 検索バーをつけました -->
+                 <li class="nav-wrapper">
+                     <form>
+                         <div class="input-field black-text">
+                             <input id="search" type="search" required>
+                             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                             <i class="material-icons">close</i>
+                         </div>
+                     </form>
+                 </li>
              </ul>
          </div>   
+  
      </nav>
-     
+
     
 </body>
 </html>
