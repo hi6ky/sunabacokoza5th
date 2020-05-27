@@ -1,37 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-    <!--Import Google Icon Font-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/img/nijinotane_img.png" sizes="16x16">
+    <title>niji no tane</title>
+    <!-- マテリアライズのcss読みこみ -->
+    <link rel="stylesheet" href="../static/css/materialize.css">
+    <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- jQueryの読み込み -->
+    <script src="../static/js/jquery-3.5.0.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/common.js"></script>
+    <!-- マテリアライズ（アイコン使用のため）の読み込み -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../static/css/materialize.css" media="screen,projection" />
-
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <!-- header part -->
+    <!-- ドロップダウンメニュー部分 -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">出会う</a></li>
+        <li><a href="#!">妊活</a></li>
+        <li><a href="#!">子育て</a></li>
+    </ul>
+    <!-- ヘッダー -->
+    <!-- ヘッダーの固定は、style.cssで指定しています -->
     <nav>
         <div class="nav-wrapper pink lighten-4">
             <a href="../static/img/nijinotane_img.png" class="brand-logo">niji no tane</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#about-us">このサイトについて</a></li>
-                <li><a href="">掲示板</a></li>
+                <li><a class="dropdown-trigger" href="" data-target="dropdown1">掲示板<i
+                            class=" material-icons right">arrow_drop_down</i></a></li>
                 <li><a href="#event">イベント</a></li>
                 <li><a href="#recommend">おすすめ</a></li>
                 <li><a href="/rules">ログイン/新規登録</a></li>
                 <li><a href="/mypage">マイページ</a></li>
+                <li><a href="/logout">ログアウト</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- 掲示板 今は同じページに移動します -->
+    <div id="forum">
+        <h3>掲示板</h3>
+        <div class="row">
+            <div class="col s3 offset-s1">
+                <!-- 出会い -->
+                <div class="partner borad">
+                    <a href="forum.html" class="partner-button">
+                        <img src="../static/img/love.jpg" alt="ハート（手）">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col s3 offset-s1">
+                <!-- 妊活 -->
+                <div class="pregnant borad">
+                    <a href="forum.html" class="pregnant-button">
+                        <img src="../static/img/pregnant.jpeg" alt="妊婦">
+                    </a>
+                </div>
+            </div>
+            <div class="col s3 offset-s1">
+                <!-- 子育て -->
+                <div class="parenting borad">
+                    <a href="forum.html" class="parenting-button">
+                        <img src="../static/img/baby_bed.jpeg" alt="ベビーベッド">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <!-- pythonが入る部分↓↓ -->
     {% block content %}
     {% endblock%}
     <!-- python修了 -->
 
-    <!-- footer part -->
+    <!-- フッター -->
     <footer class="page-footer pink lighten-4">
         <div class="container">
             <div class="row">
@@ -60,8 +113,8 @@
         </div>
     </footer>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="../static/js/materialize.js"></script>
 </body>
+
+
 
 </html>
