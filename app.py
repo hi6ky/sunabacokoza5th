@@ -162,7 +162,7 @@ def regist_post():
     c.execute("insert into user values(null, ?, ?, ?, ?, ?, ?)", (first,last,idname,password,email,ut))
     conn.commit()
     c.close()
-    return render_template("index.html")
+    return render_template("top_login.html")
 
 @app.route("/login", methods=["GET"])
 def login_get():
@@ -190,12 +190,17 @@ def login_post():
         # 存在すればログイン
         # sessionを使ってcookieにuser_idを格納する
         session["user_id"] = user_id[0]
-        return render_template("index.html")
+        return render_template("top_login.html")
 
 @app.route("/forum")
 def forum():
     # session.pop("user_id" , None)
     return render_template("forum.html")
+
+@app.route("/rules")
+def rules():
+    # session.pop("user_id" , None)
+    return render_template("rules.html")
 
 
 @app.route("/logout")
