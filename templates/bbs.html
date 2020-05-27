@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<div>
+<div class="bbs_container" style="width: 60%;border: 1px black solid;border-radius: 1%;margin-left: 20%;padding: 2%;margin-top: 5%;">
 
 <p>{{user_info[0]}}さん こんにちは</p><br>
 <!-- 課題4の答えはここ -->
 <!-- user_info[1]  id と紐づいている -->
-<img src="/static/img/{{user_info[1]}}" alt="" class="prof_img">
+<img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 9%;height: 9%;border-radius: 8%;">
 <p>画像変更</p>
 <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="upload"></br>
