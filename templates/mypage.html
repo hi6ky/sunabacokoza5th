@@ -1,10 +1,59 @@
 {% extends "base.html" %}
 {% block content %}
-<form method="post" action="/send" enctype="multipart/form-data">
-  <input type="file" id="img_file" name="img_file" class="col-sm-4">
-  <input type="submit" value="送信" class="btn">
-</form>
-  {% if img_url %}
-<p><img src="{{ img_url }}"></p>
-  {% endif %}
+<!-- Navbar goes here -->
+my page 編集
+<!-- Page Layout here -->
+<div class="row">
+
+  <div class="col s12 m4 l3">
+    <div class="myinfo">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <!-- <p><img src="{{ img_url }}"
+                  style="border-radius: 50%; box-shadow:10px 5px 5px red;width: 40%;height: 40px;margin-left: 30%;"></p> -->
+              <span class="card-title">name</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+                require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>こちらは、他人があなたの現在の情報をみるときに表示される情報です。</p>
+
+      <p>画像</p>
+      {{}}
+      <p>名前</p>
+      <p>年齢</p>
+      <p>自己紹介</p>
+    </div>
+  </div>
+
+  <div class="col s12 m8 l9">
+    <!-- Note that "m8 l9" was added -->
+    <!-- Teal page content
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+    <form method="post" action="/send" enctype="multipart/form-data">
+      <input type="file" id="img_file" name="img_file" class="col-sm-4">
+      <input type="submit" value="送信" class="btn">
+      <input class="name" type="text">
+      <input type="text" value="誕生日">
+      <p>自己紹介</p>
+      <textarea name="趣味" id="" cols="30" rows="10"></textarea>
+      <!-- {{amail}} -->
+    </form>
+    {% if img_url %}
+    <p><img src="{{ img_url }}"></p>
+    {% endif %}
+
+  </div>
+
+</div>
 {% endblock %}
