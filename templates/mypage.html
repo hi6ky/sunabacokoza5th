@@ -26,7 +26,6 @@ my page 編集
       <p>こちらは、他人があなたの現在の情報をみるときに表示される情報です。</p>
 
       <p>画像</p>
-      {{}}
       <p>名前</p>
       <p>年齢</p>
       <p>自己紹介</p>
@@ -52,8 +51,7 @@ my page 編集
     {% if img_url %}
     <p><img src="{{ img_url }}"></p>
     {% endif %}
-
+    {% endblock %}
   </div>
 
 </div>
-{% endblock %}
