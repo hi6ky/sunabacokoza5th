@@ -149,3 +149,29 @@ nav {
     display: inline-block; 
     margin: 20px;  
 }
+
+/* rules.htmlに適用 */
+.rules_margin {
+    width: 70%;
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid khaki;
+    box-shadow: 0 0 0 2rem skyblue;
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin: 2rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+    margin-left: 15%;
+    border-top:10%;
+}
+
+.reg_but {
+    width: 20%;
+    margin-left: 40%;
+    box-shadow: 0 0 0 1px black;
+    border-radius: 1px;
+}
+
+.rul_end {
+    text-align: right;
+}

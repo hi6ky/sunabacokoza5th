@@ -13,18 +13,19 @@
 
 <body>
     <!-- header part -->
-     <nav>
-         <div class="nav-wrapper pink lighten-4">
-             <a href="/" class="brand-logo">卒業制作Webサイト</a>
-             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                 <li><a href="">このサイトについて</a></li>
-                 <li><a href="">掲示板</a></li>
-                 <li><a href="">イベント</a></li>
-                 <li><a href="">おすすめ</a></li>
-                 <li><a href="/login">ログイン/新規登録</a></li>
-             </ul>
-         </div>
-     </nav>
+    <nav>
+        <div class="nav-wrapper pink lighten-4">
+            <a href="../static/img/nijinotane_img.png" class="brand-logo">niji no tane</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#about-us">このサイトについて</a></li>
+                <li><a href="">掲示板</a></li>
+                <li><a href="#event">イベント</a></li>
+                <li><a href="#recommend">おすすめ</a></li>
+                <li><a href="/rules">ログイン/新規登録</a></li>
+                <li><a href="/mypage">マイページ</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- pythonが入る部分↓↓ -->
     {% block content %}
     {% endblock%}
@@ -37,22 +38,23 @@
                 <div class="col l6 s12">
                     <h5 class="white-text">Footer Content</h5>
                     <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                        content.</p>
+                        content.
+                    </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://sunabaco.com/">SUNABACO</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://kodomap.org/">こどまっぷ</a></li>
+                        <li><a class="grey-text text-lighten-3" href=" http://pinkdot-okinawa.com">ピンクドット沖縄</a></li>
+                        <li><a class="grey-text ext-lighten-3" href="#!">Link 4</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2014 Copyright Text
+                © すなぷろ5th（翁長、川満、上原）
                 <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
