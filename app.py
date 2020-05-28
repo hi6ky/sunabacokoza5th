@@ -1,4 +1,5 @@
 import os
+# import os.path
 # sqlite3(データベース)をimportする
 import sqlite3
 # flaskにをインポートしてflaskを使えるようにする
@@ -201,7 +202,10 @@ def mistake403(code):
 # 404 お探しのページはみつかりません
 @app.errorhandler(404)
 def notfound(code):
-    return "404だよ！！見つからないよ！！！"
+    return render_template("404.html")
+
+# ダメ押しのスクレイピング
+
 
 
 # おまじない
