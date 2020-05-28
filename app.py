@@ -1,5 +1,6 @@
 import os
-# import os.path
+# チャットの設置関係パート１
+from flask_socketio import SocketIO
 # sqlite3(データベース)をimportする
 import sqlite3
 # flaskにをインポートしてflaskを使えるようにする
@@ -14,6 +15,9 @@ app = Flask(__name__)
 
 # flaskでは標準で、Flask.secret_key を設定すると、sessionを使うことができます。この時、Flaskでは session の内容を署名付きで cookie に保存する。
 app.secret_key = "#4Lghil9Q3bgt0Oolw"
+
+# チャットの設置関係パート２
+socketio = SocketIO(app)
 
 
 
@@ -204,7 +208,18 @@ def mistake403(code):
 def notfound(code):
     return render_template("404.html")
 
-# ダメ押しのスクレイピング
+# チャットの設置関係パート３
+@app.route('/chat')
+def sessions():
+    return render_template('chat.html')
+
+def messageReceived(methods=['GET', 'POST']):
+    print('message was received!!!')
+
+@socketio.on('my event')
+def handle_my_custom_event(json, methods=['GET', 'POST']):
+    print('received my event: ' + str(json))
+    socketio.emit('my response', json, callback=messageReceived)
 
 
 
