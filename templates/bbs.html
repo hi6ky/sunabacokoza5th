@@ -24,6 +24,8 @@
   {% for item in comment_list %}
   <div class="bbs_content">
     <p>{{item["comment"]}}</p>
+    <img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 9%;height: 9%;border-radius: 8%;">
+    <p>投稿者：{{user_info[0]}}</p>
     <p>投稿時間:{{item["time"]}}</p>
       <a href="/edit/{{item['id']}}">編集</a>
       <!-- 課題3の答えはここ -->
