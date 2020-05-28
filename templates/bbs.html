@@ -2,37 +2,48 @@
 
 {% block content %}
 
-<div class="bbs_container" style="width: 60%;border: 1px black solid;border-radius: 1%;margin-left: 20%;padding: 2%;margin-top: 5%;">
-
-<p>{{user_info[0]}}さん こんにちは</p><br>
-<!-- 課題4の答えはここ -->
-<!-- user_info[1]  id と紐づいている -->
-<img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 9%;height: 9%;border-radius: 8%;">
-<p>画像変更</p>
-<form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="upload"></br>
-        <input type="submit" value="画像アップロード"></br>
-</form>
-
+<div class="bbs_container"
+  style="width: 60%;border: 1px black solid;border-radius: 1%;margin-left: 20%;padding: 2%;margin-top: 5%;">
+  <div class="mn" style="width: 80%;margin-left: 10%;">
+    <p>{{user_info[0]}}さん こんにちは</p><br>
+    <!-- 課題4の答えはここ -->
+    <!-- user_info[1]  id と紐づいている -->
+    <img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 15%;height: 15%;border-radius: 8%;">
+    <p>画像変更</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="upload"></br>
+      <input type="submit" value="画像アップロード"></br>
+    </form>
+  </div>
   <form action="/add" method="post">
     投稿者：{{user_info[0]}}<br>
-    内容：<textarea name="comment" cols="30" rows="5"></textarea><br>
+    内容：<textarea style="height: 30%;width: 80%;" name="comment" cols="30" rows="5"></textarea><br>
     <input type="submit" name="save" value="送信">
   </form>
 
 
   {% for item in comment_list %}
   <div class="bbs_content">
-    <p>{{item["comment"]}}</p>
-    <img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 9%;height: 9%;border-radius: 8%;">
-    <p>投稿者：{{user_info[0]}}</p>
-    <p>投稿時間:{{item["time"]}}</p>
-      <a href="/edit/{{item['id']}}">編集</a>
-      <!-- 課題3の答えはここ -->
-      <form class="delete" action="/del" method="post">
-        <input type="hidden" name="comment_id" value="{{item['id']}}">
-        <input type="submit" name="delete" value="削除する">
-      </form><br><br>
+    <div class="card-panel grey lighten-5 z-depth-1">
+      <div class="row valign-wrapper">
+        <div class="col s8 m2 offset -m2">
+          <img src="/static/img/{{user_info[1]}}" alt="" class="circle responsive-img">
+          <p>投稿者：{{user_info[0]}}</p>
+          <p>投稿時間:{{item["time"]}}</p>
+          <div class="col s10">
+            <span class="black-text">
+              <p>{{item["comment"]}}</p>
+            </span>
+          </div>
+          <a href="/edit/{{item['id']}}">編集</a>
+          <!-- 課題3の答えはここ -->
+          <form class="delete" action="/del" method="post">
+            <input type="hidden" name="comment_id" value="{{item['id']}}">
+            <input type="submit" name="delete" value="削除する">
+          </form><br><br>
+        </div>
+      </div>
+    </div>
   </div>
   {% endfor %}
 
