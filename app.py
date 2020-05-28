@@ -175,10 +175,68 @@ def add():
     conn.close()
     return redirect('/bbs')
 
-def get_save_path():
-    path_dir = "./static/img"
-    return path_dir
 
+
+@app.route('/edit/<int:id>')
+def edit(id):
+    if 'user_id' in session :
+        conn = sqlite3.connect('lgbt.db')
+        c = conn.cursor()
+        c.execute("select comment from bbs where id = ?", (id,) )
+        comment = c.fetchone()
+        conn.close()
+
+        if comment is not None:
+            # None に対しては インデクス指定できないので None 判定した後にインデックスを指定
+            comment = comment[0] # "りんご" ○   ("りんご",) ☓
+            # fetchone()で取り出したtupleに 0 を指定することで テキストだけをとりだす
+        else:
+            return "アイテムがありません" # 指定したIDの name がなければときの対処
+
+        item = { "id":id, "comment":comment }
+
+        return render_template("edit.html", comment=item)
+    else:
+        return redirect("/403")
+
+
+
+# /add ではPOSTを使ったので /edit ではあえてGETを使う
+@app.route("/edit")
+def update_item():
+    if 'user_id' in session :
+        # ブラウザから送られてきたデータを取得
+        item_id = request.args.get("item_id") # id
+        print(item_id)
+        item_id = int(item_id) # ブラウザから送られてきたのは文字列なので整数に変換する
+        comment = request.args.get("comment") # 編集されたテキストを取得する
+
+        # 既にあるデータベースのデータを送られてきたデータに更新
+        conn = sqlite3.connect('lgbt.db')
+        c = conn.cursor()
+        c.execute("update bbs set comment = ? where id = ?",(comment,item_id))
+        conn.commit()
+        conn.close()
+
+        # アイテム一覧へリダイレクトさせる
+        return redirect("/bbs")
+    else:
+        return redirect("/403")
+
+
+@app.route('/del' , methods=["POST"])
+def del_task():
+    id = request.form.get("comment_id")
+    id = int(id)
+    conn = sqlite3.connect('lgbt.db')
+    c = conn.cursor()
+    # 指定されたitem_idを元にDBデータを削除せずにdel_flagを1にして一覧からは表示しないようにする
+    # 課題1の答えはここ del_flagを1にupdateする
+    c.execute("update bbs set del_flag = 1 where id=?", (id,))
+    conn.commit()
+    conn.close()
+    # 処理終了後に一覧画面に戻す
+    return redirect("/bbs")
 
 @app.route("/talk")
 def talk():
@@ -225,4 +283,5 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
 
 # おまじない
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+    socketio.run(app, debug=True)
