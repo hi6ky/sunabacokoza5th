@@ -60,11 +60,7 @@ p{
     text-align: center;
 }
 
-.borad{
-     position: relative;
-     overflow: hidden;
-     padding-top: 60%;
-}
+/* ボタンの文字入れ */
 .borad p {
     position: absolute;
     color: white;
@@ -81,16 +77,28 @@ p{
     -webkit-transform: translate(-50%, -50%);
 }
 
+/* 画像のサイズそろえる */
 #forum img{
    position: absolute;
      /* filter: blur(3px); */
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 100%;
-   height: 100%;
+   width:25%;
+   height: 25%;
    object-fit: cover;
     
+}
+
+.borad {
+    position: relative;
+    overflow: hidden;
+    padding-top: 60%;
+}
+/* ボタン画像を並べる */
+.forum-button{
+    display: flex;
+    justify-content: center;
 }
 /* aタグ（ボタン部分）を親要素と同じ大きさにする */
 .pregnant-button{
@@ -108,7 +116,7 @@ p{
     top: 3px;
 } */
 /* 出会うボタンの処理 */
-.partner {
+/* .partner {
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
       0 2px 2px rgba(0, 0, 0, 0.12),
       0 4px 4px rgba(0, 0, 0, 0.12),
@@ -131,10 +139,10 @@ p{
     position: relative;
     top: 3px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-} */
+} */ */
 
 /* 妊活ボタンの処理 */
-.pregnant-button {
+/* .pregnant-button {
     box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
     transition: .3s;
 }
@@ -147,10 +155,10 @@ p{
 .pregnant-button:active {
     position: relative;
     top: 3px;
-}
+} */
 
 /* 子育てボタンの処理 */
-.parenting-button {
+/* .parenting-button {
     box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
     transition: .3s;
 }
@@ -163,7 +171,7 @@ p{
 .parenting-button:active {
     position: relative;
     top: 3px;
-}
+} */
 
 /* イベント */
 #event {
@@ -212,6 +220,30 @@ p{
     margin-top: -56px;
     padding-top: 56px;
 }
+.select_article{
+ display: flex;
+ justify-content: center;
+}
+
+/* 記事ボタンの装飾 */
+/* 影付け */
+.article_img{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+    0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12),
+    0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+/* カーソルを当てたとき */
+.article_img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.article_img:active{
+    position: relative;
+    top: 3px;
+}
+
 footer{
     display: flex;
 }
