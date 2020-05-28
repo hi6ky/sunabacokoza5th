@@ -26,7 +26,7 @@ socketio = SocketIO(app)
 # ログイン前トップ画面表示のルーティング
 @app.route("/")
 def index():
-    return render_template('top_login.html')
+    return render_template('top.index.html')
 
 
 # GET /register => 登録画面を表示
