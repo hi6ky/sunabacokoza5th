@@ -1,10 +1,12 @@
+#!/usr/bin/env python
+# coding: utf-8
 import os
 # チャットの設置関係パート１
 from flask_socketio import SocketIO
 # sqlite3(データベース)をimportする
 import sqlite3
 # flaskにをインポートしてflaskを使えるようにする
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, jsonify
 from werkzeug.utils import secure_filename
 # datetimeをインポート 本来なら from datetime import datetime になる?? 
 import datetime
@@ -46,7 +48,7 @@ def regist_post():
     ut = datetime.datetime.now()
     conn = sqlite3.connect("lgbt.db")
     c = conn.cursor()
-    c.execute("insert into user values(null, ?, ?, ?, ?, ?, ?)", (first,last,idname,password,email,ut))
+    c.execute("insert into user values(null, ?, ?, ?, ?, ?, ?, ?,)", (first,last,idname,password,email,ut))
     conn.commit()
     c.close()
     return render_template("top_login.html")
