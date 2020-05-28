@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/img/nijinotane_img.png" sizes="16x16">
+    <title>niji no tane</title>
+    <!-- マテリアライズのcss読みこみ -->
+    <link rel="stylesheet" href="../static/css/materialize.css">
+    <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- jQueryの読み込み -->
+    <script src="../static/js/jquery-3.5.0.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/common.js"></script>
+    <!-- マテリアライズ（アイコン使用のため）の読み込み -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ドロップダウンメニュー部分 -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">出会う</a></li>
+        <li><a href="#!">妊活</a></li>
+        <li><a href="#!">子育て</a></li>
+    </ul>
+    <!-- ヘッダー -->
+    <!-- ヘッダーの固定は、style.cssで指定しています -->
+    <nav>
+        <div class="nav-wrapper pink lighten-4">
+            <a href="../static/img/nijinotane_img.png" class="brand-logo">niji no tane</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#about-us">このサイトについて</a></li>
+                <li><a class="dropdown-trigger" href="" data-target="dropdown1">掲示板<i
+                            class=" material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="#event">イベント</a></li>
+                <li><a href="#recommend">おすすめ</a></li>
+                <li><a href="/rules">ログイン/新規登録</a></li>
+                <li><a href="/mypage">マイページ</a></li>
+                <li><a href="/logout">ログアウト</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="img_container" style="height: 600px;width: 100%;">
+        <img src="../static/img/yamasha_eternal_1_TP_V1.jpg" class="h_img" alt=""
+            style="position: absolute;width: 70%;height: 70%; margin-left: 15%;">
+        <h1 class="h_title" style="position: relative;">お探しのページはありませんでした</h1>
+        <p style="position: relative;">残念ながらあなたがお探しのものはここにはありませんでした。でも諦めないで下さい。世界はあなたが知っている以上に広いものです。
+            どこかに必ずあなたが探しているものがあるはずです。まだまだインターネットは完全ではありませんが、少しでもあなたの役に立つ
+            サイトをご用意しました。ぜひご覧下さい。
+        </p>
+
+    </div>
+
+    <!-- フッター -->
+    <footer class="page-footer pink lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://sunabaco.com/">SUNABACO</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://kodomap.org/">こどまっぷ</a></li>
+                        <li><a class="grey-text text-lighten-3" href=" http://pinkdot-okinawa.com">ピンクドット沖縄</a></li>
+                        <li><a class="grey-text ext-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © すなぷろ5th（翁長、川満、上原）
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+
+</html>
