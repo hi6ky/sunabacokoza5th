@@ -19,11 +19,17 @@
 </head>
 
 <body>
-    <!-- ドロップダウンメニュー部分 -->
+    <!-- 掲示版ドロップダウンメニュー部分 -->
     <ul id="dropdown1" class="dropdown-content">
         <li><a href="#!">出会う</a></li>
         <li><a href="#!">妊活</a></li>
         <li><a href="#!">子育て</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#movie">映画</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#book">絵本</a></li>
+        <li><a href="#article">記事</a></li>
     </ul>
     <!-- ヘッダー -->
     <!-- ヘッダーの固定は、style.cssで指定しています -->
@@ -35,7 +41,8 @@
                <li><a class="dropdown-trigger" href="" data-target="dropdown1">掲示板<i
                            class=" material-icons right">arrow_drop_down</i></a></li>
                <li><a href="#event">イベント</a></li>
-               <li><a href="#recommend">おすすめ</a></li>
+               <li><a class="dropdown-trigger" href="" data-target="dropdown2">おすすめ<i
+                           class=" material-icons right">arrow_drop_down</i></a></li>
                <!-- <li><a href="/rules">ログイン/新規登録</a></li> -->
                <li><a href="/mypage">マイページ</a></li>
                <li><a href="/logout">ログアウト</a></li>
@@ -63,7 +70,8 @@
                         tane = 未来・子ども・可能性<br>
                         <br>
                         多様な家族の”カタチ”を認め、誰もが家族を持つ幸せをサポートしていくwebサイトとなっています。
-                        <br>niji no taneでは多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子ども
+                        <br><br>
+                        niji no taneでは多様の家族のあり方の情報発信を行うことで選択肢を広げていくこと、子ども
                         や家族をつくりたいLGBTの方々が安心して情報交換が行える場を提供しそれぞれにとって幸せな家族を
                         つくっていくお手伝いをすることを目的としています。</p>
 
@@ -138,11 +146,11 @@
 </div>
   
 
-<div id="recommend">
-    <h3>おすすめ</h3>
-    <h4>映画</h4>
-    <p>LGBTQを題材とした映画をいくつか紹介します！他にもおすすめがあれば、教えてください♪</p>
-    <div class="movie">
+<div class="recommend">
+     <h3>おすすめ</h3>
+    <div id="movie">
+        <h4>映画</h4>
+        <p>LGBTQを題材とした映画をいくつか紹介します！他にもおすすめがあれば、教えてください♪</p>
         <div class="choice_movie">
             <p>チョコレートドーナツ</p>
             <iframe width="350" height="200" src="https://www.youtube.com/embed/QVWY5ETc11k" frameborder="0"
@@ -186,9 +194,9 @@
     </div>
 
         <!-- ユーチューブ -->
-        <h4> youtube </h4>
-        <p>LGBTQをテーマにしたYouTubeです！！</p>
-        <div class="youtube">
+        <div id="youtube">
+            <h4> youtube </h4>
+            <p>LGBTQをテーマにしたYouTubeです！！</p>
         <div class="choice_youtube">
             <p>同性愛者だって子供が欲しい！同性カップルが子供を授かる方法</p>
             <iframe width="350" height="200" src="https://www.youtube.com/embed/EGuxaH-Oljk" frameborder="0"
@@ -209,8 +217,9 @@
                 allowfullscreen></iframe>
         </div>
 
-     <h5>おすすめ絵本一覧</h5>
-
+<div id="book">
+     <h4>絵本</h4>
+     <p>様々な家族の形を～～～～～</p>
     <div class="choice_youtube">
         <p>いろいろいろんなかぞくのほん</p>
         <a
@@ -231,8 +240,12 @@
             href="https://www.amazon.co.jp/%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E3%81%8B%E3%81%9E%E3%81%8F%E2%80%95%E3%83%88%E3%83%83%E3%83%89%E3%81%AE%E3%81%88%E3%81%BB%E3%82%93-%E3%83%88%E3%83%83%E3%83%89-%E3%83%91%E3%83%BC%E3%83%AB/dp/457703154X/ref=sr_1_5?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=DRF62CJP183&dchild=1&keywords=%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%E3%81%8B%E3%81%9E%E3%81%8F%E3%81%AE%E3%81%BB%E3%82%93&qid=1590284114&sprefix=%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%2Caps%2C409&sr=8-5">
             <img width="350" height="350" src="../static/img/book_todd.jpg" alt="いろいろかぞく トッドのえほん"></a>
     </div>
-
-    <h5>おすすめ記事一覧</h5>
+</div>
+<div id="article">
+    <h4>記事</h4>
+    <p>LGBTに関する記事を～～～～
+        <br>クリックすると、記事に飛びます。
+    </p>
     <div class="choice_youtube">
         <p>LGBTの子育て研究に関する論文を読んでみた</p>
         <a href="https://lgbt-life.com/topics/yse6/"><img width="350" height="200" src="../static/img/article1.png"
@@ -251,6 +264,7 @@
 
     </div>
     </div>
+</div>
 </div>
 
   
