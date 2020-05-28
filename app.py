@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 # datetimeをインポート 本来なら from datetime import datetime になる?? 
 import datetime
 # BeautifulSoup をインポート
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 # appにflaskを定義して使えるようにしている。flaskクラスのインスタンスを使って、appという変数に代入している。
 app = Flask(__name__)
 
