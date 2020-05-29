@@ -88,7 +88,8 @@ def login_post():
 @app.route("/logout")
 def logout():
     session.pop("user_id" , None)
-    return redirect("/")
+    return render_template("logout.html")
+
 
 
 # 画像のアップローダー
