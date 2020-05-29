@@ -2,43 +2,52 @@
 
 {% block content %}
 
-<div class="bbs_container" style="width: 60%;border: 1px black solid;border-radius: 1%;margin-left: 20%;padding: 2%;margin-top: 5%;">
-
-<p>{{user_info[0]}}さん こんにちは</p><br>
-<!-- 課題4の答えはここ -->
-<!-- user_info[1]  id と紐づいている -->
-<img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 9%;height: 9%;border-radius: 8%;">
-<p>画像変更</p>
-<form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="upload"></br>
-        <input type="submit" value="画像アップロード"></br>
-</form>
-
-  <form action="/add" method="post">
-    投稿者：{{user_info[0]}}<br>
-    内容：<textarea name="comment" cols="30" rows="5"></textarea><br>
-    <input type="submit" name="save" value="送信">
+<div class="bbs_container"
+  style="width: 60%;border: 1px black solid;border-radius: 1%;margin-left: 20%;padding: 2%;margin-top: 5%;">
+  <div class="mn" style="width: 80%;margin-left: 10%;">
+    <p style="text-align: center;font-size: xx-large;">{{user_info[0]}}さん こんにちは</p><br>
+    <!-- 課題4の答えはここ -->
+    <!-- user_info[1]  id と紐づいている -->
+    <img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 25%;height: 25%;border-radius: 8%; margin-left: 37%;">
+    <p style="text-align: center;">画像変更は下のボタンを操作して下さい</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="upload" style="margin-left: 40%;"></br>
+      <input type="submit" value="画像アップロード" style="margin-left: 40%;"></br>
+    </form>
+  </div>
+  <form action="/add" method="post" style="margin-left: 8%;">
+    <p>投稿者：<span style="font-size: xx-large;">{{user_info[0]}}</span></p><br>
+    内容：<textarea style="height: 30%;width: 80%;" name="comment" cols="30" rows="5"></textarea><br>
+    <input type="submit" name="save" value="送信" style="margin-left: 5%;">
   </form>
 
 
   {% for item in comment_list %}
-  <div class="bbs_content">
-    <p>{{item["comment"]}}</p>
-    <p>投稿時間:{{item["time"]}}</p>
-      <a href="/edit/{{item['id']}}">編集</a>
-      <!-- 課題3の答えはここ -->
-      <form class="delete" action="/del" method="post">
-        <input type="hidden" name="comment_id" value="{{item['id']}}">
-        <input type="submit" name="delete" value="削除する">
-      </form><br><br>
+  <div class="bbs_container">
+    <div class="card-panel grey lighten-5">
+      <div class="row">
+        <div class="aaa">
+          <img src="/static/img/{{user_info[1]}}" alt="" class="circle responsive-img" style="height: 10%;width: 10%;">
+          <p>投稿者：<span style="font-size: xx-large;margin-top: -2%;">{{user_info[0]}}</span></p><br>
+          <p style="margin-top: -2%;">投稿時間:{{item["time"]}}</p><br>
+          <div class="col s10">
+            <span class="black-text">
+              <p style="font-size: x-large;margin-top: -2%;">{{item["comment"]}}</p>
+            </span>
+          </div>
+          <!-- 課題3の答えはここ -->
+          <form class="delete" action="/del" method="post" style="margin-top: 10%;">
+            <input type="hidden" name="comment_id" value="{{item['id']}}">
+            <input type="submit" name="delete" value="削除する">
+            <a href="/edit/{{item['id']}}" style="margin-left: 5%;">編集する</a>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
   {% endfor %}
 
 
-</div>
-
-<div>
-  <a href="/logout">ログアウト</a>
 </div>
 
 {% endblock %}

@@ -33,12 +33,18 @@ p{
     /* ジャンプ時のずれ修正 */
     margin-top: -56px;
     padding-top: 56px;
+    /* 上との余白 ジャンプ位置の関係でパディングで設定しています*/
+    padding-top: 156px;
 }
 #about-us p{
     font-size: 16px;
 }
 #about-us h4{
     text-align: center;
+
+}
+.us-contents{
+    margin-top: 80px;
 }
 .us-text{
     margin: auto;
@@ -53,6 +59,8 @@ p{
     /* ジャンプ時のずれ修正 */
     margin-top: -56px;
     padding-top: 56px;
+   /* 上との余白 ジャンプ位置の関係でパディングで設定しています*/
+   padding-top: 156px;
     /* display: flex;
     justify-content: center; */
 }
@@ -63,12 +71,15 @@ p{
 .forum-button{
      display:flex;
      justify-content: space-around; 
-     
+     margin-top: 80px;    
 }
-
+.forum-button div{
+    box-sizing: content-box;
+    width: 22%;
+}
 /* 掲示版ボタンの装飾 */
 .button img {
-     width: 80%;
+     width: 100%;
      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
         0 2px 2px rgba(0, 0, 0, 0.12),
         0 4px 4px rgba(0, 0, 0, 0.12),
@@ -92,11 +103,16 @@ p{
      /* ジャンプ時のずれ修正 */
      margin-top: -56px;
      padding-top: 56px;
+      /* 上との余白 ジャンプ位置の関係でパディングで設定しています*/
+      padding-top: 156px;
     
 }
 
 #event h3 {
     text-align: center;
+}
+#event .collapsible{
+    margin-top: 80px;
 }
 
 
@@ -105,6 +121,8 @@ p{
      /* ジャンプ時のずれ修正 */
      margin-top: -56px;
      padding-top: 56px;
+     /* 上との余白 ジャンプ位置の関係でパディングで設定しています*/
+     padding-top: 156px;
 }
 .recommend h3{
     margin-top: 120px;
@@ -125,37 +143,71 @@ p{
     text-align: center;
     margin-top: -56px;
     padding-top: 56px;
-}
-#book{
-    margin-top: -56px;
-    padding-top: 56px;
+    /* 上のコンテンツとのマージン */
+    padding-top: 116px;
 }
 
+#books{
+    margin-top: -56px;
+    padding-top: 56px;
+    /* 上のコンテンツとのマージン */
+    padding-top: 130px;
+    /* いい感じのところにジャンプさせたいが為の余白 */
+    margin: 54px;
+    }
+    .select_book{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+
 /* 絵本ボタンの装飾 */
-.book_img{
+.books_img{
      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
      0 2px 2px rgba(0, 0, 0, 0.12),
      0 4px 4px rgba(0, 0, 0, 0.12),
      0 8px 8px rgba(0, 0, 0, 0.12),
      0 16px 16px rgba(0, 0, 0, 0.12);
 }
-.book_img:hover{
+.books_img:hover{
     opacity: 0.5;
     cursor: pointer;
 }
-.book_img:active {
+.books_img:active {
     position: relative;
     top: 3px;
 }
 
+.books_headline{
+    text-align: center;
+}
+
+/* 記事部分 */
+
 #article{
+    /* ヘッダーずれ分 */
     margin-top: -56px;
     padding-top: 56px;
+     /* 上との余白 ジャンプ位置の関係でパディングで設定しています*/
+    padding-top: 156px;
+    margin:40px;
+    /* ヘッダーとの隙間 */
+    margin-bottom: 80px;
 }
+
 .select_article{
  display: flex;
  justify-content: space-around;
 }
+
+.article_headline{
+    text-align: center;
+}
+  
+
 
 /* 記事ボタンの装飾 */
 .article_img{
@@ -181,7 +233,7 @@ footer{
 
 /* ログアウトページ */
 .logout{
-    background-image: url(../img/balloon.jpg);
+    background-image: url(../img/green-heart.jpg);
     background-color: rgba(238, 255, 254, 0.123);
     background-blend-mode: lighten;
     background-size: cover;
@@ -212,6 +264,16 @@ footer{
     color: white;
 }
 
+/* 新規登録ページ */
+/* ボタンの装飾..うまくいかない... */
+ .regist_button2{
+    display: inline-block;
+    cursor: pointer;
+    width:300px;
+    height: 300px;
+}
+
+
 /* rules.htmlに適用 */
 .rules_margin {
     width: 70%;
@@ -229,7 +291,7 @@ footer{
 
 .reg_but {
     width: 20%;
-    margin-left: 40%;
+    margin-left: 30%;
     box-shadow: 0 0 0 1px black;
     border-radius: 1px;
 }

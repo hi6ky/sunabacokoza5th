@@ -1,15 +1,17 @@
+#!/usr/bin/env python
+# coding: utf-8
 import os
 # チャットの設置関係パート１
 from flask_socketio import SocketIO
 # sqlite3(データベース)をimportする
 import sqlite3
 # flaskにをインポートしてflaskを使えるようにする
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, jsonify
 from werkzeug.utils import secure_filename
 # datetimeをインポート 本来なら from datetime import datetime になる?? 
 import datetime
 # BeautifulSoup をインポート
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 # appにflaskを定義して使えるようにしている。flaskクラスのインスタンスを使って、appという変数に代入している。
 app = Flask(__name__)
 
@@ -24,7 +26,7 @@ socketio = SocketIO(app)
 # ログイン前トップ画面表示のルーティング
 @app.route("/")
 def index():
-    return render_template('top_login.html')
+    return render_template('top.index.html')
 
 
 # GET /register => 登録画面を表示
@@ -46,7 +48,7 @@ def regist_post():
     ut = datetime.datetime.now()
     conn = sqlite3.connect("lgbt.db")
     c = conn.cursor()
-    c.execute("insert into user values(null, ?, ?, ?, ?, ?, ?)", (first,last,idname,password,email,ut))
+    c.execute("insert into user values(null, ?, ?, ?, ?, ?, ?, 0)", (first,last,idname,password,email,ut))
     conn.commit()
     c.close()
     return render_template("top_login.html")
@@ -86,7 +88,8 @@ def login_post():
 @app.route("/logout")
 def logout():
     session.pop("user_id" , None)
-    return redirect("/")
+    return render_template("logout.html")
+
 
 
 # 画像のアップローダー
@@ -265,6 +268,13 @@ def mistake403(code):
 @app.errorhandler(404)
 def notfound(code):
     return render_template("404.html")
+
+
+# マイページ
+@app.route('/mypage')
+def mypage():
+    return render_template("mypage.html")
+
 
 # チャットの設置関係パート３
 @app.route('/chat')
