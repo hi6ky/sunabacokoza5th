@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div class="bbs_container"
-  style="width: 60%;border: 1px black solid;border-radius: 1%;margin-left: 20%;padding: 2%;margin-top: 5%;">
+<div class="row">
+  <div class="col s12" style="background-color: rgba(255,243,184,0.1);">
+<div class="bbs_container" style="width: 60%;border: 1px black solid;border-radius: 1%;margin-left: 20%;padding: 2%;margin-top: 5%;">
   <div class="mn" style="width: 80%;margin-left: 10%;">
     <p style="text-align: center;font-size: xx-large;">{{user_info[0]}}さん こんにちは</p><br>
     <!-- 課題4の答えはここ -->
@@ -45,6 +45,8 @@
       </div>
     </div>
   </div>
+  </div>
+</div>
   {% endfor %}
 
 
