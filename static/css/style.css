@@ -264,6 +264,17 @@ footer{
     color: white;
 }
 
+/* 新規登録ページ */
+/* ボタンの装飾..うまくいかない... */
+ .regist_button{
+    /* display: inline-block; */
+    cursor: pointer;
+    width:20px;
+    height: 30px;
+}
+.regist_contents{
+    margin: auto;
+}
 
 /* rules.htmlに適用 */
 .rules_margin {

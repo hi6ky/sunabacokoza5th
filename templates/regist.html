@@ -1,39 +1,41 @@
 {% extends "base.html" %}
 <!-- 入力フォーム -->
 {% block content %}
-<div class="row">
-    <div class="col s6 m4 regist">
-        <div class="card red lighten-4">
-            <div class="card-content black-text regist-text">
+<div class="row regist">
+    <div class="col s6 m4 offset-m4 offset-s3  card red lighten-4 regist_contents">
+       
+            <div class="card-content black-text">
                 <span class="card-title">新規登録</span>
                 <p>下の入力フォームに必要事項をご入力下さい</p>
                 <div class="row">
                 <form class="col s12" action="/regist" method="post">
                     <div class="row">
-                        <div class="input-field col s12">
-                            <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="first_name">
-                            <label for="first_name">name *このお名前がサイト上で使用されます</label>
+                        <div class="input-field col s12 user_name">
+                            <input  id="first_name" type="text" class="validate" name="first_name">
+                            <label for="first_name">name :サイト上で使用されます</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 user_id">
                             <input id="id" type="text" class="validate" name="id_name">
-                            <label for="id">user name</label>
+                            <label for="id">ID :ログインで使用します</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 pass">
                             <input id="password" type="password" class="validate" name="password">
-                            <label for="password">*Password</label>
+                            <label for="password">Password</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="email" type="email" class="validate" name="email">
-                            <label for="email">*E-mail</label>
+                            <label for="email">E-mail</label>
                         </div>
                     </div>
-                        <input type="submit" name="save" value="登録">
+                    
+                        <input type="submit" name="save" value="登録" class="regist_button">
+                    
                 </form>
             </div>
         </div>
