@@ -268,6 +268,13 @@ def mistake403(code):
 def notfound(code):
     return render_template("404.html")
 
+
+# マイページ
+@app.route('/mypage')
+def mypage():
+    return render_template("mypage.html")
+
+
 # チャットの設置関係パート３
 @app.route('/chat')
 def sessions():
