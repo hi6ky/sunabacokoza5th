@@ -92,7 +92,7 @@ def logout():
 
 
 
-# 画像のアップローダー
+# 画像のアップローダーBBS部分
 @app.route('/upload', methods=["POST"])
 def do_upload():
     # bbs.tplのinputタグ name="upload" をgetしてくる
@@ -128,6 +128,43 @@ def get_save_path():
     path_dir = "./static/img"
     return path_dir
 
+
+
+# # 画像のアップローダーMY PAGE部分
+# @app.route('/mypage', methods=["POST"])
+# def do_upload():
+#     # mypage.tplのinputタグ name="upload" をgetしてくる
+#     upload = request.files['upload']
+#     # uploadで取得したファイル名をlower()で全部小文字にして、ファイルの最後尾の拡張子が'.png', '.jpg', '.jpeg'ではない場合、returnさせる。
+#     if not upload.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+#         return 'png,jpg,jpeg形式のファイルを選択してください'
+    
+#     # 下の def get_save_path()関数を使用して "./static/img/" パスを戻り値として取得する。
+#     save_path = get_save_path()
+#     # パスが取得できているか確認
+#     print(save_path)
+#     # ファイルネームをfilename変数に代入
+#     filename = upload.filename
+#     # 画像ファイルを./static/imgフォルダに保存。 os.path.join()は、パスとファイル名をつないで返してくれます。
+#     upload.save(os.path.join(save_path,filename))
+#     # ファイル名が取れることを確認、あとで使うよ
+#     print(filename)
+    
+#     # アップロードしたユーザのIDを取得
+#     user_id = session['user_id']
+#     conn = sqlite3.connect('lgbt.db')
+#     c = conn.cursor()
+#     # update文
+#     # 上記の filename 変数ここで使うよ
+#     c.execute("update user set my_img = ? where id=?", (filename,user_id))
+#     conn.commit()
+#     conn.close()
+
+#     return redirect ('/mypage')
+
+# def get_save_path():
+#     path_dir = "./static/img"
+#     return path_dir
 
 # BBS（とりあえず）
 @app.route('/bbs')
@@ -279,7 +316,11 @@ def mypage():
 # チャットの設置関係パート３
 @app.route('/chat')
 def sessions():
-    return render_template('chat.html')
+    if 'user_id' in session :
+        user_id = session['user_id']
+        return render_template('chat.html')
+    else:
+        return "ログインをしてから入室してください"
 
 def messageReceived(methods=['GET', 'POST']):
     print('message was received!!!')
