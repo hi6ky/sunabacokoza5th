@@ -316,7 +316,11 @@ def mypage():
 # チャットの設置関係パート３
 @app.route('/chat')
 def sessions():
-    return render_template('chat.html')
+    if 'user_id' in session :
+        user_id = session['user_id']
+        return render_template('chat.html')
+    else:
+        return "ログインをしてから入室してください"
 
 def messageReceived(methods=['GET', 'POST']):
     print('message was received!!!')
