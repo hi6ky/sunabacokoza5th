@@ -8,7 +8,7 @@
     <p style="text-align: center;font-size: xx-large;">{{user_info[0]}}さん こんにちは</p><br>
     <!-- 課題4の答えはここ -->
     <!-- user_info[1]  id と紐づいている -->
-    <img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 25%;height: 25%;border-radius: 8%; margin-left: 37%;">
+    <img src="/static/img/{{user_info[1]}}" alt="" class="prof_img" style="width: 30%;height: 30%;border-radius: 8%; margin-left: 37%;">
     <p style="text-align: center;">画像変更は下のボタンを操作して下さい</p>
     <form action="/upload" method="post" enctype="multipart/form-data">
       <input type="file" name="upload" style="margin-left: 40%;"></br>
@@ -27,7 +27,7 @@
     <div class="card-panel grey lighten-5">
       <div class="row">
         <div class="aaa">
-          <img src="/static/img/{{user_info[1]}}" alt="" class="circle responsive-img" style="height: 10%;width: 10%;">
+          <img src="/static/img/{{user_info[1]}}" alt="" class="circle responsive-img" style="height: 15%;width: 15%;">
           <p>投稿者：<span style="font-size: xx-large;margin-top: -2%;">{{user_info[0]}}</span></p><br>
           <p style="margin-top: -2%;">投稿時間:{{item["time"]}}</p><br>
           <div class="col s10">
@@ -36,7 +36,7 @@
             </span>
           </div>
           <!-- 課題3の答えはここ -->
-          <form class="delete" action="/del" method="post" style="margin-top: 10%;">
+          <form class="delete" action="/del" method="post" style="margin-top: 20%;">
             <input type="hidden" name="comment_id" value="{{item['id']}}">
             <input type="submit" name="delete" value="削除する">
             <a href="/edit/{{item['id']}}" style="margin-left: 5%;">編集する</a>
