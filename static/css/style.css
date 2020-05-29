@@ -234,19 +234,30 @@ footer{
 /* ログアウトページ */
 .logout{
     background-image: url(../img/green-heart.jpg);
-    background-color: rgba(238, 255, 254, 0.123);
+    background-color: rgba(240, 217, 13, 0.2);
     background-blend-mode: lighten;
     background-size: cover;
     height: 100vh;
     width: 100vw;
     position: relative;
 }
-.logout h1 p{
+.logout h1 {
      height: 100vh;
      width: 100vw;
      position: relative;
+     color: white;
+     text-align: center;
+     padding-top: 23%;
+     text-shadow: 1px 2px 3px #808080;
 }
 
+
+/* .logout p{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    color: white;
+} */
 
 /* 404ページ */
 .img404{
