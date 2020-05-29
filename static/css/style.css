@@ -266,15 +266,13 @@ footer{
 
 /* 新規登録ページ */
 /* ボタンの装飾..うまくいかない... */
- .regist_button{
-    /* display: inline-block; */
+ .regist_button2{
+    display: inline-block;
     cursor: pointer;
-    width:20px;
-    height: 30px;
+    width:300px;
+    height: 300px;
 }
-.regist_contents{
-    margin: auto;
-}
+
 
 /* rules.htmlに適用 */
 .rules_margin {

@@ -2,7 +2,7 @@
 <!-- 入力フォーム -->
 {% block content %}
 <div class="row regist">
-    <div class="col s6 m4 offset-m4 offset-s3  card red lighten-4 regist_contents">
+    <div class="col s6 m4 offset-m4 offset-s3  card pink lighten-5 regist_contents">
        
             <div class="card-content black-text">
                 <span class="card-title">新規登録</span>
@@ -33,13 +33,16 @@
                             <label for="email">E-mail</label>
                         </div>
                     </div>
-                    
-                        <input type="submit" name="save" value="登録" class="regist_button">
-                    
+                    <input type="submit" name="save" value="登録"
+                        class="regist_button btn waves-effect waves-light 
+                        pink lighten-4 " style="width: 100px; height: 40px; padding: 2px; margin: auto;">
                 </form>
             </div>
+            
         </div>
 
     </div>
+    
 </div>
+<input href="/" type="submit" name="save" value="登録" class="regist_button2">
 {% endblock%}
