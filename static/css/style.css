@@ -194,7 +194,7 @@ p{
      /* 上との余白 ジャンプ位置の関係でパディングで設定しています*/
     padding-top: 156px;
     margin:40px;
-    ヘッダーとの隙間
+    /* ヘッダーとの隙間 */
     margin-bottom: 80px;
 }
 
@@ -262,6 +262,15 @@ footer{
     position:absolute;
     margin-top: 56px;
     color: white;
+}
+
+/* 新規登録ページ */
+/* ボタンの装飾..うまくいかない... */
+ .regist_button2{
+    display: inline-block;
+    cursor: pointer;
+    width:300px;
+    height: 300px;
 }
 
 
