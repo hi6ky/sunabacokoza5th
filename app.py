@@ -76,7 +76,7 @@ def login_post():
     c.close()
     if user_id is None:
         # 存在しなければ、再度login.htmlを表示
-        return "ログインに失敗しました。再度ログインをやり直してください。"
+        return render_template("failed_login.html")
     else:
         # 存在すればログイン
         # sessionを使ってcookieにuser_idを格納する

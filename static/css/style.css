@@ -264,14 +264,26 @@ footer{
     color: white;
 }
 
-/* 新規登録ページ */
-/* ボタンの装飾..うまくいかない... */
- .regist_button2{
-    display: inline-block;
-    cursor: pointer;
-    width:300px;
-    height: 300px;
+/* ログイン失敗ページ */
+.failed_login{
+    background-image: url(../img/rainbow.jpg);
+    background-color: rgba(252, 246, 238, 0.2);
+    background-blend-mode: lighten;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
+.failed_text{
+    position:absolute;
+    margin-top: 64px;
+    color: white;
+}
+.failed_text a{
+    display: inline-block;
+    height: 30px;
+}
+
 
 
 /* rules.htmlに適用 */

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/img/nijinotane_img.png" sizes="16x16">
+    <title>にじ の たね</title>
+    <!-- マテリアライズのcss読みこみ -->
+    <link rel="stylesheet" href="../static/css/materialize.css">
+    <!-- cssファイル2つ目です（マテリアライズで調整が難しいところはここを適用させています）。以降stye.cssと表記 -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- jQueryの読み込み -->
+    <script src="../static/js/jquery-3.5.0.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/common.js"></script>
+    <!-- マテリアライズ（アイコン使用のため）の読み込み -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ログイン前のヘッダー -->
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#movie">映画</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#book">絵本</a></li>
+        <li><a href="#article">記事</a></li>
+    </ul>
+    <!-- ヘッダー -->
+    <!-- ヘッダーの固定は、style.cssで指定しています -->
+    <nav>
+        <div class="nav-wrapper pink lighten-4">
+            <a href="../static/img/nijinotane_img.png" class="brand-logo">にじ の たね</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#about-us">このサイトについて</a></li>
+                <li><a href="#event">イベント</a></li>
+                <li><a class="dropdown-trigger" href="" data-target="dropdown2">おすすめ<i
+                            class=" material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="/rules">ログイン/新規登録</a></li>
+                <!-- <li><a href="/mypage">マイページ</a></li>
+                <li><a href="/logout">ログアウト</a></li> -->
+            </ul>
+
+        </div>
+    </nav>
+    <div class="failed_login">
+        <div class="failed_text">
+            <h1>ログインに失敗してしまいました..</h1>
+            <p>こちらから再度ログインをお願いします </p>
+            <a class="waves-effect waves-light btn-largepink lighten-4" href="login.html" style="display: inline-block; height: 20px;"><i
+                    class="material-icons right">forward</i>ログイン</a>
+          </div>
+    </div>
+
+
+    <!-- フッター -->
+    <!-- <footer class="page-footer pink lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://sunabaco.com/">SUNABACO</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://kodomap.org/">こどまっぷ</a></li>
+                        <li><a class="grey-text text-lighten-3" href=" http://pinkdot-okinawa.com">ピンクドット沖縄</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © すなぷろ5th（翁長、川満、上原）
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div> -->
+    </footer>
+
+</body>
+
+
+
+</html>
