@@ -9,10 +9,17 @@
                 <p>下の入力フォームに必要事項をご入力下さい</p>
                 <div class="row">
                 <form class="col s12" action="/regist" method="post" style="text-align: center;">
+
                     <div class="row">
-                        <div class="input-field col s12 user_name">
+                        <div class="input-field col s6 user_name">
                             <input  id="first_name" type="text" class="validate" name="first_name">
-                            <label for="first_name">name :サイト上で使用されます</label>
+                            <label for="first_name">お名前  *サイト上で使用します</label>
+                        </div>
+                    </div>
+                    <div class="row" style="display: none;">
+                        <div class="input-field col s6 user_name">
+                            <input id="last_name" type="text" class="validate" name="last_name">
+                            <label for="last_name">名字</label>
                         </div>
                     </div>
                     <div class="row">
